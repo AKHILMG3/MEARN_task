@@ -1,0 +1,89 @@
+*{
+    margin:0PX;
+    padding:0PX;
+    width: 100%;
+    height: auto;
+}
+h1{
+   text-align: center;
+   background-color:cyan;
+   font-family: "Jaro", sans-serif;
+
+}
+img{
+    border: 2px solid ;
+    color: black;
+    width: 150px;
+    height: 200px;
+}
+i{
+    color: black;
+}
+.A1{
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    border: solid;
+    background-color: deeppink;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    padding: 10px;
+    margin: 10px;
+    
+}
+h3{
+    text-align: center;
+    width: 300px;
+    height:30px;
+ color: cornflowerblue;
+ background-color: cornsilk;
+ margin-top: 30px   ;
+}
+h5{
+    width: 100%;
+    height:20px;
+    background-color: darkseagreen;
+    text-align:center;
+    margin-top: ;
+
+}
+header{
+    width: 100%;
+}
+#A{
+    display: flex;
+    justify-content: space-evenly;
+   width: 100%;
+   height: 600PX;
+   background-color: darkkhaki;
+   justify-content: center;
+}
+button:hover{
+    background-color:red;
+
+}
+#banner{
+    height: 300px;
+    width: 100%;
+    background-image: url('https://krvia.ac.in/wp-content/uploads/2021/02/Essential-Books.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row1{
+    display: flex;
+}
+.row3 h5{
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    text-align: center;
+color: rgb(14, 15, 15)
+}
+

@@ -1,0 +1,89 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Slabo 27px", serif;
+    }
+header{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.head{
+    position: fixed;
+    width: 100%;
+    z-index:+2;
+}
+.heading{
+    margin-top: 8px;
+
+}
+.heading img{
+    height: 100px;
+    
+}
+.topsec{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchbar{
+    width: 435px;
+    height: 40px;
+    margin-top: 8px;
+    padding: 6px;
+    border-radius: 50px;
+    border-color: transparent;
+    border: 1px solid black;
+    align-items: center;
+
+}
+.searchbar i{
+    padding: 6px;
+
+}
+.signin{
+    margin-top: 8px;
+    padding-right: 50px;
+    align-items: center;
+}
+.signin button{
+    padding: 12px;
+    border: none;
+    background-color: transparent;
+}
+ul{
+    display: flex;
+    justify-content: center;
+
+}
+ul li{
+    padding: 8px;
+    margin: 12px;
+}
+ul i{
+    padding: 6px;
+
+}
+ul a{
+    text-decoration: none;
+    color: black;
+}
+#bn{
+    width: 300px;
+    height: 50px;
+    color: rgb(118, 117, 140);
+    background-color: black;
+}
+p{
+    color: rgb(47, 45, 60);
+    
+}
+#a1{
+    float: left;
+    margin: 20px;
+    color: rgb(122, 122, 125);
+}
+#logo{
+    float: right;
+    margin: 20px;
+    color: grey;
+}

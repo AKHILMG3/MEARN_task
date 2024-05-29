@@ -1,0 +1,45 @@
+div{
+    background-color: aquamarine;
+float:left;
+margin: 20px;
+width: 250px;
+height200px;
+border-radius: 10px;
+margin: 8px;
+padding: 8px;
+border: 2px solid brown;
+   
+    
+}
+h1{
+background-color: aqua;
+text-align:center;
+padding: 10px;
+text-decoration: underline;
+text-shadow: 1px 20px 10px;
+}
+p{
+    text-align: center;
+    padding: 10px;
+    
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 1px 20px 10px
+}
+img{
+    border:2px solid;
+    color: black;
+    border-radius: 100%;
+    margin: 20px;
+    padding:8px;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    
+}
+.cls{
+    width:250px;
+    height:200px;
+}

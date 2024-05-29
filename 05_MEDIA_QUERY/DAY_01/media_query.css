@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    color: blue;
+
+}
+div{
+    background-color: aquamarine;
+    margin: 50px;
+}
+div h2{
+    color: rgb(255, 40, 3);
+    text-align: center;
+}
+@media screen and (max-width:400px) {
+    h1{
+        text-align: center;
+        color: rgb(250, 0, 0);
+    
+    }
+    div{
+        background-color: rgb(42, 0, 230);
+        margin: 50px;
+    }
+    div h2{
+        color: rgb(255, 40, 3);
+        text-align: center;
+    }
+    
+}

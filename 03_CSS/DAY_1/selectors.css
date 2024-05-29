@@ -1,0 +1,33 @@
+#head{
+    color: blueviolet;
+    text-align: center;;
+}
+.cls{
+
+    color: blue;
+}
+*{
+    text-align: center;
+    background-color: aquamarine;
+
+}
+button{
+    background-color:orangered;
+    color: white;
+}
+button:hover{
+    background-color: white;
+    color: orangered;
+}
+p::first-letter{
+    color: crimson;
+    font-size: x-large;
+
+}
+p::first-line{
+    color: darkblue;
+    font-size: larger;
+}
+#para1{
+    font-fami;
+}

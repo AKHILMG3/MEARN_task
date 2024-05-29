@@ -1,0 +1,24 @@
+div{
+    width: 400px;
+    height: 600px;
+    text-align: center;
+  background-color: rgba(0, 106, 255, 0.537);
+  border:solid;
+  h3{
+    color: blue;
+  }
+  h5{
+    color: rgb(255, 34, 10);
+  }
+}
+button{
+    color: rgb(12, 8, 1);
+    background-color:orange ;
+}
+h1{
+    text-align: center;
+    color: black;
+background-color: blueviolet;
+}
+
+

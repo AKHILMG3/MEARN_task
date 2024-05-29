@@ -1,0 +1,16 @@
+.row{
+    background-color: beige;
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.col{
+    background-color: blue;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+.c1{
+    left: 100px;
+    top: 50px;
+}

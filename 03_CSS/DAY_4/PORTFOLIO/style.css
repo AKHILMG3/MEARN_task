@@ -1,0 +1,59 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+h1{
+    font-family: "DM Serif Display", serif;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+ul li{
+    margin: 10px;
+    list-style: none;
+    color: rgb(231, 14, 14);
+}
+a{
+    text-decoration: none;
+    color: rgb(250, 248, 248);
+}
+body{
+    background-color: rgb(12, 235, 228);
+}
+a:hover{
+    text-shadow: 3px 4px 5px gray ;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+header{
+    width: 100%;
+    background-color: rgb(19, 14, 14);
+}
+#home h1{
+    position: absolute;
+    top: 100%;
+    left: 72%;
+    color: rgb(243, 243, 243);
+    background-color: rgb(12, 12, 9);
+    
+}
+nav img{
+    border-radius: 100%;
+}
+#para{
+    text-align: center;
+}
+#dsp{
+    display: flex;
+}
+
+
+ 
