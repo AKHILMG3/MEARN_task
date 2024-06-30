@@ -75,6 +75,7 @@ footer p{
     margin: 0%;
     padding: 0%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 /* header */
 header{
@@ -86,6 +87,7 @@ header{
 }
 /* nav section */
 nav{
+    width: 400px;
     background-color: rgba(0, 106, 255, 0.528) ;
     text-align: center;
     padding: 0%;
@@ -93,6 +95,7 @@ nav{
     width: 400px;
 }
 nav ul{
+    width: 400px;
     display: flex;
     justify-content: center;
     width: 400PX;
@@ -112,7 +115,7 @@ main{
     background-color: rgba(41, 0, 177, 0.474);
 }
 main h2,h3{
-        color: rgb(247, 0, 255);
+        color: rgb(10, 2, 10);
         text-align: center;
         padding: 20px;
 }

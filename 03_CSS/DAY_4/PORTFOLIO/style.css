@@ -122,6 +122,35 @@ h3{
     text-align: justify;
 }
 
+#contact{
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
+.footer{
+    display: flex ;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+.contact{
+    margin: 20px;
+}
+input{
+    width: 300PX;
+    height: 0px;
+    padding: 30px;
+}
+button{
+    padding: 10px;
+    margin: 20px;
+    width: 150PX;
+    color:white;
+    background-color: rgba(95, 93, 93, 0.904)
+}
+
+
 
 
 

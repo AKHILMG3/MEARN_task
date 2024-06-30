@@ -1,94 +1,102 @@
-*{
-    margin:0PX;
-    padding:0PX;
-    width: 100%;
-    height: auto;
-}
-h1{
-   text-align: center;
-   background-color:cyan;
-   font-family: "Jaro", sans-serif;
+*{margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
 
 }
-img{
-    border: 2px solid ;
-    color: black;
-    width: 150px;
-    height: 200px;
-}
-i{
-    color: black;
-}
-.A1{
-    width: 300px;
-    height: 400px;
-    text-align: center;
-    border: solid;
-    background-color: deeppink;
-    float: left;
-    margin: 10px;
-    padding: 10px;
-}
-button{
-    width: 100px;
-    height: 30px;
-    background-color: red;
-    padding: 10px;
-    margin: 10px;
-}
-button:hover{
-    color: blue;
-    background-color: blue;
-}
-h3{
-    text-align: center;
- color: cornflowerblue;
- background-color: cornsilk;
- margin-top:40px;
- padding-left: 5px;
- margin-bottom: 30px;
-}
-h5{
-    width:150px;
-    height:20px;
-    background-color: darkseagreen;
-    text-align:center;
-    margin-top:10px ;
-
+body{
+    background-color: rgba(138, 37, 37, 0.274);
 }
 header{
     width: 100%;
-
+    position: sticky;
+    top: 0px;
+    background-color: rgba(165, 42, 42, 0.404);
 }
-#A{
+nav{
     display: flex;
-    justify-content: space-evenly;
-   width: 100%;
-   height: 600PX;
-   background-color: darkkhaki;
-   justify-content: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul li{
+    margin: 20px;
+    list-style: none;
+}
+h1{
+    font-family: "Notable", sans-serif;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-shadow: 3px 4px 5px white;
+    text-decoration: underline;
+}
+#banner{width: 100%;  
+    background-image: url("https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    height: 800px;
+    background-attachment: fixed;
+    object-fit: fill;
+    
+}
+#head{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.books{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 0px;
+}
+.cls img{
+    width: 340px;
+    margin: 30px;
+}
+.cls{
+    border: 2px solid black;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(85, 17, 17, 0.342);
+}
+
+.row{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
 }
 button:hover{
-    background-color:red;
-
+    background-color: rgba(206, 2, 2, 0.315);
 }
-#banner{
-    height: 300px;
-    width: 100%;
-    background-image: url('https://krvia.ac.in/wp-content/uploads/2021/02/Essential-Books.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.row1{
+.footer{
     display: flex;
-}
-.row3 h5{
-    margin-left: 10px;
-    padding: 10px;
-    background-color: rgb(0, 225, 255);
-    text-align: center;
-color: rgb(14, 15, 15)
+    padding: 20px;
+    justify-content: space-between;
+} 
+.foot{
+     margin:20px;
+    padding: 20px;
+    padding-top:5px
 
 }
+.foot h3{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
 

@@ -1,22 +1,36 @@
 *{
-    padding: 0%;
-    margin: 0%;
-    font-family: "Manrope", sans-serif;
+    margin: 0px;
+    padding: 0x;
+    font-family: "DM Sans", sans-serif;
 }
 body{
-    background-color: rgba(255, 0, 0, 0.315);
+    background-color: rgba(107, 3, 3, 0.897);
 }
 h1{
-    font-family: "Rubik Bubbles", system-ui;
-    padding: 20px;
+    font-family: "Pacifico", cursive;
+    font-size: x-large;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 header{
+    width: 100%;
     background-color: brown;
-    position: sticky;
+    display: flex;
 }
 nav{
     display: flex;
+    margin: 10px;
+    padding:5px;
     justify-content: space-between;
+}
+.head{
+    width: 100%;
+    background-color: rgba(129, 0, 0, 0.418);
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+
 }
 ul{
     display: flex;
@@ -24,15 +38,37 @@ ul{
     align-items: center;
 }
 ul li{
-    margin: 20px;
     list-style: none;
+    margin: 5px;
+    color: rgb(0, 0, 0);
 }
-i{
-    color: rgb(255, 255, 255);
-}
-a:hover{
-    text-shadow: 3px 4px 5px black;
+ul li:hover{
     text-decoration: underline;
-
 }
-
+.row img{
+    width: 500px;
+    margin: 20px;
+    padding: 20px;
+}
+#sec{
+    
+    text-align: justify;
+    margin: 30px;
+    padding: 10px;
+    justify-content: space-around;
+}
+h2{
+    text-decoration: underline;
+}
+.typ{
+    display: flex;
+    margin: 30px;
+    margin: 20px;
+    padding: 20px;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+h3{
+    text-align: center;
+    margin: 10px;
+}

@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Teachers", sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    background-color: rgba(43, 6, 255, 0.445);
+    margin: 0%;
+    color: white;
+    position: sticky;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin:0px;
+    padding: 0px;
+}
+h1{
+    font-family: "Anton", sans-serif;
+    padding: 20px;
+    text-decoration: underline;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+ul li{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    
+}
+ul li:hover{
+    text-decoration: solid underline;
+}
+.Head{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    margin: 10px;
+    background-color: rgba(6, 43, 255, 0.377);
+    
+}
+.Head ul li:hover{
+    background-color: rgba(5, 2, 2, 0.178);
+    padding: 3px;
+}
+.head ul li:hover{
+
+    background-color: rgb(43, 44, 43);
+    text-decoration: none;
+}
+.head{
+     text-align: center;
+    }
+    .headsec{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        justify-content: space-between; 
+        margin:20px 400px;
+        padding: 20px;  
+        text-align: center; 
+    }
+    #sec1{
+        display: flex;
+        justify-content: space-around;
+        margin: 0px;
+        padding: 0px;
+    }
+    .cls{
+        display: flex;
+    }
+    
+    h2{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .secimg{
+        margin: 30px;
+    }
+    h3{
+        text-align: center;
+        align-items: center;
+    }
+    .secimg:hover{
+        box-shadow: 4px 5px 6px 7px;
+
+
+    }
+#sec2{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+}
+.secimg2{
+    margin: 30px;
+}
+
+.view{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 8px;
+    padding: 5px;
+}
+.view:hover{
+    box-shadow: 1px 1px 1px 1px;
+}
+button{
+    background-color: rgba(216, 216, 216, 0.575);
+}
+button:hover{
+    background-color: rgb(143, 143, 143);
+    margin: 2px;
+    padding: 1px;
+}
+video{
+    margin: 0px;
+    padding: 0px;
+}
+#footer{
+    background-color: white;
+    justify-content: center ;
+    
+}
+.row{
+        display: flex;
+    
+}
+.col h5{
+    
+    margin: 20px;
+}
+.foot{
+    margin: 0px;
+    justify-content: center;
+    text-align: center;
+}
+h5{
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+}
+
+
+
+    
+
+
+
+
