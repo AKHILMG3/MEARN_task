@@ -4,7 +4,7 @@
     font-family: "DM Sans", sans-serif;
 }
 body{
-    background-color: rgba(107, 3, 3, 0.897);
+    background-color: rgba(80, 3, 3, 0.767);
 }
 h1{
     font-family: "Pacifico", cursive;
@@ -17,12 +17,18 @@ header{
     width: 100%;
     background-color: brown;
     display: flex;
-}
-nav{
-    display: flex;
-    margin: 10px;
-    padding:5px;
     justify-content: space-between;
+}
+header img{
+    margin: 5px;
+   padding: 5px;
+}
+header button{
+    margin: 20px;
+    padding: 10x;
+}
+header h1{
+    margin: 20px;
 }
 .head{
     width: 100%;
@@ -30,12 +36,14 @@ nav{
     padding: 10px;
     position: sticky;
     top: 0px;
+    
 
 }
 ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 5px;
 }
 ul li{
     list-style: none;
@@ -55,18 +63,26 @@ ul li:hover{
     text-align: justify;
     margin: 30px;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-b;
 }
 h2{
     text-decoration: underline;
+}
+p{
+    width: 600px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
 }
 .typ{
     display: flex;
     margin: 30px;
     margin: 20px;
     padding: 20px;
-    justify-content: space-evenly;
-    border: 1px solid black;
+    justify-content: space-around;
+    border: 1px solid black ;
+    width:100%;
 }
 h3{
     text-align: center;

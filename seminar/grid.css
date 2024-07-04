@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 50px;
+}
+.header{
+    max-width: 900px;
+    margin: auto;
+    background-color:burlywood;
+
+
+    display: grid;
+    grid-template-columns: 100px 200px 200px; 
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-flow: 125px;
+    grid-gap: 20px;
+}
+
+
+/* .header .item1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: aqua;
+
+} */
