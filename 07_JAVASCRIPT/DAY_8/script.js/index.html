@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Oject Model</title>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <h1 id="head">Welcome to DOM</h1>
+    <h1 class="cls">DOM</h1>
+    <ol>
+        <li>document.getElementsById("id-name")</li>
+        <li>document.getElementsByClassName("class-name")</li>
+        <li>document.getElementsByTagName("tag-name")</li>
+        <li>document.getElementsByquerySelector("class-name","id-name")</li>
+        <button onclick="colorChange()">Click Me</button>
+    </ol>
+    
+    <script>    
+        function colorChange(){
+            const doc = document.getElementById("head")
+            console.log(doc);
+            doc.style.color="red"
+        }
+       // document.getElementById
+       const doc = document.getElementById("head");
+       console.log(doc);
+       doc.style.color = 'orange'
+       // document.getElementsByClassNamecons
+       const doc1 = document.getElementsByClassName("cls")
+       console.log(doc1);
+       console.log(Array.from(doc1)); // array
+       console.log(Array.from(doc1).map(item => item.style.color = "red"));
+
+    //    document.getElementsByTagName
+    const doc2 = document.getElementsByTagName("li")
+    console.log(doc2); // HTMLCollection
+    console.log([...doc2]);// array
+    console.log([...doc2].map(item=>item.style.color="blue"));
+
+    // document.querySelector(".class-name","#id-name")
+    const doc3 = document.querySelector(".cls")
+    console.log(doc3);
+    // document.querySelectorAll(".class-name","#id-name")
+    const doc4 = document.querySelectorAll(".cls")
+    console.log(doc4);
+
+
+
+    </script>
+    
+</body>
+</html>

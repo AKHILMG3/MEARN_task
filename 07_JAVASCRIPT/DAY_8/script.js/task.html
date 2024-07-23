@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document_task</title>
+</head>
+<body>
+    <h1 id="head">DOM getElementById</h1>
+    <ol>
+        <li id="para">This is the first paragraph</li>
+        <li>This is the second paragraph</li>
+        <li>This is the third paragraph</li>
+        <button onclick="colorchange('red')">Red</button>
+        <button onclick="Colorchange()">Green</button>
+        <button onclick="colorChange()">Blue</button>
+    </ol>
+    <script>
+        const doc = document.getElementById("head")
+        console.log(doc);
+        doc.style.color= "orange"
+
+        function colorchange(){
+            const doc1 = document.getElementsById("para")
+            console.log(doc1);
+            doc1.style.color = ("red")
+        }
+
+    </script>
+    
+</body>
+</html>

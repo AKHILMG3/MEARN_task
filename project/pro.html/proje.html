@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing</title>
+    <link rel="stylesheet" href="./proje.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            width:100vw;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-yellow-100 h-screen bg-no-repeat bg-cover" style="background-image: url(/img/img3.jpg );height:700px">
+        <header class=" backdrop-blur border-2 border-white h-14" style="  position:sticky; top: 0; z-index: 2;">
+        <ul class="flex space-x-3 mt-3 mb-4">
+            <img class="ms-2 mb-2 pb-2 h-10" src="/img/logo.png" alt=""> 
+        <p class="font-bold text-white text-3xl mb-10 ">SparkzEvent</p>
+        </ul>
+        <nav class="blur-lg  w-screen h-14 pt-3 pe-4  flex justify-between "> 
+            
+        </nav>
+    </header>
+            <div class="h-80">
+                <h1 class="pt-48 ps-20 text-6xl italic text-white font-serif">SparkzEvent Management </h1>
+                <p class="ps-20 text font-bold text-white mt-4 font-serif">"Setting the Stage for Unforgettable Moments – Feel the Pulse!"</p>
+                <div class="backdrop-blur-md mt-4 w-2/5 border-2 border-white ms-20 p-4 rounded-xl">
+                <p class="ps-20 text font-bold text-white font-sans ">Sign Up and Login To Avail Our Services</p>
+                <div class="ps-20 pt-4">
+                    <button class=" h-9 w-28 p-1 mr-10 font-bold text-white bg-purple-600 rounded-lg hover:bg-purple-300 hover:text-purple-700 active:bg-purple-800 active:text-white">sign Up</button>
+                    <button  class=" h-9 w-28 p-1 font-bold text-white bg-purple-600 rounded-lg  hover:bg-purple-300 hover:text-purple-700 active:bg-purple-800 active:text-white">Log In</button>
+                </div>
+                 </div>  
+                </div>
+                <div class=" h-8 p-1 backdrop-blur-md  mt-80">
+                    <center><p>© 2024 SparkzEvent, Inc. &nbsp; All Event Management Rights Reserved.</p></center>
+                </div>
+            </div><br>
+
+            <section id="header">
+      
+                <h1 class="text-4xl font-bold text-yellow-500 mb-2 text-center p-2">Booking Service</h1>
+                <br>
+                <div class="head">
+                  <form>
+                    <label for="name" class="block text-white">Full Name </label>
+                    <input type="text" class="w-full p-2 rounded" placeholder="Enter your Name">
+                    <br><br>
+                    <label for="email" class="block text-white">Email </label>
+                    <input type="text" class="w-full p-2 rounded" placeholder="Enter your Email">
+                    <br><br>
+                    <label for="date" class="block text-white"> Date of Event </label>
+                      <label for="ddmm" class="block text-white"></label>
+                      <input type="date" class="w-full p-2 rounded">
+                    <br><br>
+                    <label for="type" class="block text-white">Event Type </label>
+                    <select name="" id="eventype" class="w-full p-2 rounded">
+          
+                      <option value="" hidden>  </option>
+                      <option class="font-bold"> Birthday Party</option>
+                      <option  class="font-bold"> Photography Section </option>
+                      <option  class="font-bold"> Wedding</option>
+                      <option class="font-bold">Conferences</option>
+                      <option class="font-bold">Meetings</option>
+                      <option class="font-bold">Workshops</option>
+                      <option class="font-bold">Seminar</option>
+                      <option class="font-bold">Seminar</option>
+                      <option class="font-bold">Virtual Events</option>
+                      <option class="font-bold">Charity Events</option>
+                      <option class="font-bold">Webinars</option>
+                  </select>
+                  <br><br>
+                  <label for="destination"  class="block text-white">Destination</label>
+                  <input type="location" class="w-full p-2 rounded" placeholder="Enter your Location"><br><br>
+                  <label for="ampm" class="block text-white">Time </label>
+                  <input type="time" class="w-full p-2 rounded">
+           
+                  <br><br>
+          
+                  <label for="contact" class=" block text-white">Contact us </label>
+                  <input type="text" class="w-full p-2 rounded" placeholder="Enter your phone number">
+                    
+                    </div>
+                    <br><br>
+                    
+              
+              <button type="submit" class="w-100% py-3 m-3 px-10 rounded bg-yellow-500 text-black font-bold hover:bg-green-500">BOOK NOW</button>
+              <br><br>
+              <input type="checkbox"> <label for="" class="text-white"> Terms and Conditions </label>
+                  </form>
+                </div>
+              </section>
+</body>
+</html>

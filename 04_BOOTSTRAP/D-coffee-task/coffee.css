@@ -4,7 +4,7 @@
     font-family: "DM Sans", sans-serif;
 }
 body{
-    background-color: rgba(80, 3, 3, 0.767);
+    background-color: brown;
 }
 h1{
     font-family: "Pacifico", cursive;
@@ -73,6 +73,9 @@ p{
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-family: "Dosis", sans-serif;
+    font-size: xx-large;
+
 
 }
 .typ{
@@ -83,6 +86,7 @@ p{
     justify-content: space-around;
     border: 1px solid black ;
     width:100%;
+    background-color: rgba(70, 2, 2, 0.253);
 }
 h3{
     text-align: center;

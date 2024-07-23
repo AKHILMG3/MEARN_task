@@ -49,7 +49,8 @@ console.log(numToStr+9);
 
 let sname = "Manu"
 
-console.log(sname.length); // prints the length of the string
+console.log(sname.length); // prints the length of the string // he string 4
+ 
 console.log(sname.toUpperCase()); // prints MANU
 console.log(sname.toLowerCase()); // print manu
 
@@ -60,7 +61,7 @@ console.log(newname);
 
 
 let s_name = "sagar"
-let m
+let mvc
 
 
 

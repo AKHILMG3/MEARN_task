@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <section id="header"> 
+      
+      <h1 class="text-4xl font-bold text-yellow-500 mb-2 text-center p-2">Booking Service</h1>
+      <br>
+      <div class="head">
+        <form>
+          <label for="name" class="block text-white">Full Name </label>
+          <input type="text" class="w-full p-2 rounded" placeholder="Enter your Name">
+          <br><br>
+          <label for="email" class="block text-white">Email </label>
+          <input type="text" class="w-full p-2 rounded" placeholder="Enter your Email">
+          <br><br>
+          <label for="date" class="block text-white"> Date of Event </label>
+            <label for="ddmm" class="block text-white"></label>
+            <input type="date" class="w-full p-2 rounded">
+          <br><br>
+          <label for="type" class="block text-white">Event Type </label>
+          
+          <select name="" id="eventype" class="w-full p-2 rounded">
+
+            <option value=""> Select Events </option>
+            <option class="font-bold"> Birthday Party</option>
+            <option  class="font-bold"> Photography Section </option>
+            <option  class="font-bold"> Wedding</option>
+            <option class="font-bold">Conferences</option>
+            <option class="font-bold">Meetings</option>
+            <option class="font-bold">Workshops</option>
+            <option class="font-bold">Seminar</option>
+            <option class="font-bold">Seminar</option>
+            <option class="font-bold">Virtual Events</option>
+            <option class="font-bold">Charity Events</option>
+            <option class="font-bold">Webinars</option>
+        </select>
+        <br><br>
+        <label for="destination"  class="block text-white">Destination</label>
+        <input type="location" class="w-full p-2 rounded" placeholder="Enter your Location"><br><br>
+        <label for="ampm" class="block text-white">Time </label>
+        <input type="time" class="w-full p-2 rounded">
+ 
+        <br><br>
+
+        <label for="contact" class=" block text-white">Contact us </label>
+        <input type="text" class="w-full p-2 rounded" placeholder="Enter your phone number">
+          
+          </div>
+          <br><br>
+          
+    
+    <button type="submit" class="w-100% py-3 m-3 px-10 rounded bg-yellow-500 text-black font-bold hover:bg-green-500">BOOK NOW</button>
+    <br><br>
+    <input type="checkbox"> <label for="" class="text-white"> Terms and Conditions </label>
+        </form>
+      </div>
+    </section>
+    </body>
+    
