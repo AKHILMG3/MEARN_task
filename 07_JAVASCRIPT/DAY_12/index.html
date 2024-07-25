@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./carworld_.js"></script>
+
+</head>
+<body class="m-3">
+
+    <h1 class="text-primary text-center p-2 m-4">Car World</h1>
+
+    <div class="d-flex justify-content-evenly text-center p-3 m-3">
+     <div class="border border-dark border-5 w-50 p-5 ">
+        <h2 class="text-primary">Enter Details</h2><br><br>
+
+        <div>
+           
+            <input id="brand" type="text" class="w-75" placeholder="Car Brand"><br><br>
+            <input id="price" type="text" class="w-75" placeholder="Price"><br><br>
+            <input id="key" type="text" class="w-75" placeholder="Key"><br>
+
+            <button class=" py-2 my-3 text-light bg-primary rounded w-50" onclick="store()">Store Records</button><br><br>
+        
+        </div>
+     </div>
+
+     <div class="border border-dark border-5 w-25 p-5 ">
+        <h2 class="text-primary"> Enter Key to Retrieve Item</h2><br><br>
+
+        <div>
+            <input id="retri" type="text" class="w-75" placeholder="Key"><br>
+
+            <button class=" py-2 my-3 text-light bg-primary rounded w-75" onclick="retrieve()">Retrieve Records</button>
+
+            <div id="result"></div>
+
+        </div>
+        
+     </div>
+
+     <div class="border border-dark border-5 w-25 P-5">
+        <h2 class="text-primary"> Enter Key to Delete Item</h2><br><br>
+
+        <div>
+        
+            <input id="keys" type="text" placeholder="Key"><br>
+
+            <button class=" py-2 my-3 text-light bg-primary rounded w-50" onclick="remove()">Remove Records</button>
+
+            <div id="result1"></div>
+
+        </div>
+
+     </div>
+
+    </div>
+<center>
+    
+    <BUtton class="py-2 my-3 text-light bg-primary rounded ms-5 w-50" onclick="clearAll()">Clear All Records</BUtton>
+</center>
+
+</body>
+</html>

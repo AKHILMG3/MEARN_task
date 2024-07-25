@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+</style>
 <body class="bg-gray-400">
     <section class="bg-white m-5">
         <div>
@@ -43,8 +65,8 @@
     
             <div class="d-flex justify-content-between p-5 m-5">
                 <div class="border-2 border-dark w-full">
-                    <h1 class="font-bold text-2xl ">Balance </h1><br><br>
-                <h2 class="font-bold">0 Rs</h2>
+                    <h1 id="inbal" class="font-bold text-2xl ">Balance </h1><br><br>
+                <h2 id="bal" class="font-bold">0 Rs</h2>
                 </div>
                 <div class="border-2 border-dark ">
                 <h1 class="font-bold text-2xl">Spent </h1><br><br>
@@ -55,43 +77,58 @@
             </div>
            </div>
 
-        </div> 
-       <footer>
-        <summary>view more</summary>
-        <br><hr>
-
-        <h1>Income</h1>
-
-        <table class="justify-content-between">
-          <th>
-            <tr>
-              <td>Type</td>
-              <td>Amount</td>
-              <td>Balance</td>
-              <td>Date</td>
-              <td>Time</td>
-            </tr>
-          </th>
-          <tbody id="result"></tbody>
-        </table>
-
-        
-        <h1>Expense</h1>
+        </div>
+        <br><hr><br>
+      <div>
+        <div>
+          <h3>View more</h3><br>
 
         <table>
-          <th>
-            <tr>
-              <td>Type</td>
-              <td>Amount</td>
-              <td>Balance</td>
-              <td>Date</td>
-              <td>Time</td>
-            </tr>
-          </th>
-          <tbody id="result1"></tbody>
-        </table>
+          <thead>
+              <tr>
+                  <th id="inco">Income</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Type</td>
+                  <td>Amount</td>
+                  <td>Date</td>
+                  <td>Time</td>
+                  <td>Balance</td>
+              </tr>
+           
+          </tbody>
+          <p id="resultin"></p>
+      </table>
+        </div>
 
-       </footer>
+        <div>
+         
+
+        <table>
+          <thead>
+              <tr>
+                  <th id="expen">Expense</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Type</td>
+                  <td>Amount</td>
+                  <td>Date</td>
+                  <td>Time</td>
+                  <td>Balance</td>
+              </tr>
+           
+          </tbody>
+          <p id="resultex"></p>
+      </table>
+        </div>
+
+    </div>
     </section>
     
 </body>

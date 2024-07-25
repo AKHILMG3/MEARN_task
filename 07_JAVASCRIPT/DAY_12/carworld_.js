@@ -20,14 +20,14 @@ function store(){
 }
 
 function retrieve(){
-    if(key1.value==""){
+    if(retri.value==""){
         alert("Enter the key")
     }
-    let keys = key1.value
-    if(keys in localStorage){
-        let Details = JSON.parse(localStorage.getItem(keys))
+    let key = retri.value
+    if(key in localStorage){
+        let Details = JSON.parse(localStorage.getItem(key))
 
-        result.innerHTML=`brand:${Details.BRAND}
+        result.innerHTML=`brand:${Details.BRAND} <br>
         price:${Details.PRICE}
         `
     }
@@ -37,6 +37,16 @@ function retrieve(){
 }
 
 function remove(){
-    localStorage.clear()
-    alert("Details Clear")
+    let key1 = keys.value
+    if(key1 in localStorage){
+        localStorage.removeItem("key1")
+        result1.innerHTML = " Delect Records"
+    }
+    else{
+        result1.innerHTML = " Details not found"
+    }
 }
+ function clearAll(){
+    localStorage.clear()
+    alert("Clear the Details")
+ }
