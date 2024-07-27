@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./home.js"></script>
 </head>
 <style>
   table {
@@ -34,7 +35,7 @@ tbody tr:hover {
 <body class="bg-gray-400">
     <section class="bg-white m-5">
         <div>
-            <h1 class="p-4 m-5 font-bold text-4xl">Welcome user</h1>
+            <h1 id="head" class="p-4 m-5 font-bold text-4xl">Welcome </h1>
         </div>
 
         <div class="text-center p-2 m-5">
@@ -69,8 +70,8 @@ tbody tr:hover {
                 <h2 id="bal" class="font-bold">0 Rs</h2>
                 </div>
                 <div class="border-2 border-dark ">
-                <h1 class="font-bold text-2xl">Spent </h1><br><br>
-                <h2 class="font-bold">0 Rs</h2>
+                <h1 id="spe" class="font-bold text-2xl">Spent </h1><br><br>
+                <h2 id="spebal" class="font-bold">0 Rs</h2>
                 <div>
     
                 </div>
@@ -95,7 +96,6 @@ tbody tr:hover {
                   <td>Type</td>
                   <td>Amount</td>
                   <td>Date</td>
-                  <td>Time</td>
                   <td>Balance</td>
               </tr>
            
@@ -119,7 +119,6 @@ tbody tr:hover {
                   <td>Type</td>
                   <td>Amount</td>
                   <td>Date</td>
-                  <td>Time</td>
                   <td>Balance</td>
               </tr>
            
