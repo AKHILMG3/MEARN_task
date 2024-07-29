@@ -35,10 +35,10 @@ balance=balance;
 
 function submit(){
     let amunt ={
-        type:reeson.value,
+        type:reson.value,
         amount:expense.value
     }
-    if(reeson.value && expense.value){
+    if(reson.value && expense.value){
         balnc += +expense.value
         balance -= +expense.value
         localStorage.setItem(amunt.type,JSON.stringify(amunt))
@@ -69,5 +69,4 @@ let years = currentDate.getFullYear();
 let month = currentDate.getMonth();
 let day = currentDate.getDate();
 
-user = localStorage.getItem("uname")
-head.innerHTML= `Welcome  ${user}`
+document.getElementById('head').innerHTML = `Welcome ${user}`

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Budget Calculator</h1>
+    <label for="income">Total Income:</label>
+    <input type="number" id="income" placeholder="Enter your total income">
+
+    <label for="expenses">Total Expenses:</label>
+    <input type="number" id="expenses" placeholder="Enter your total expenses">
+
+    <button onclick="calculateBudget()">Calculate</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculateBudget() {
+            const income = parseFloat(document.getElementById('income').value) || 0;
+            const expenses = parseFloat(document.getElementById('expenses').value) || 0;
+
+            const balance = income - expenses;
+            const resultElement = document.getElementById('result');
+
+            if (balance > 0) {
+                resultElement.innerText = `You have a surplus of $${balance.toFixed(2)}`;
+                resultElement.style.color = 'green';
+            } else if (balance < 0) {
+                resultElement.innerText = `You have a deficit of $${Math.abs(balance).toFixed(2)}`;
+                resultElement.style.color = 'red';
+            } else {
+                resultElement.innerText = 'Your budget is balanced';
+                resultElement.style.color = 'black';
+            }
+        }
+    </script>
+</body>
+</html>
