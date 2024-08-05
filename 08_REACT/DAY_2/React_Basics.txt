@@ -48,6 +48,10 @@ REACT
 
                 BASIC CONCEPTS
 
-        1. DATA PASSING - ONE WAY DATA BINDING        
+        1. DATA PASSING - ONE WAY DATA BINDING
+        2. Events
+        3. Conditional Rendering        
+                        ->if -> && 
+                        ->if-> else -> ?:
 
 

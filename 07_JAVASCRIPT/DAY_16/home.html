@@ -46,8 +46,8 @@ tbody tr:hover {
            <center>
             <div class="border border-2 border-dark w-75 p-3 m-2 "> 
                 <h1 class="font-bold text-2xl ">Add Money</h1> <br>
-                <input id="" type="text" class="w-50 p-2 rounded border-2 border-dark" placeholder="Enter Income Type"><br><br>
-                <input type="text" class="w-50 p-2 rounded  border-2 border-dark" placeholder="Enter Amount"><br><br>
+                <input id="reason" type="text" class="w-50 p-2 rounded border-2 border-dark" placeholder="Enter Income Type"><br><br>
+                <input id="income" type="text" class="w-50 p-2 rounded  border-2 border-dark" placeholder="Enter Amount"><br><br>
 
                 <button class="btn bg-blue-500 hover:bg-green-600 w-25" onclick="add()">Add</button>
 
@@ -58,8 +58,8 @@ tbody tr:hover {
            <div class="d-flex justify-content-evenly">
             <div class="border border-2 border-dark w-50 p-3 m-2 "> 
                 <h1 class="font-bold text-2xl ">Expense</h1> <br>
-                <input id="" type="text" class="w-50 p-2 rounded border-2 border-dark" placeholder="Expense Type"><br><br>
-                <input type="text" class="w-50 p-2 rounded  border-2 border-dark" placeholder="Amount"><br><br>
+                <input id="reson" type="text" class="w-50 p-2 rounded border-2 border-dark" placeholder="Expense Type"><br><br>
+                <input id="expense" type="text" class="w-50 p-2 rounded  border-2 border-dark" placeholder="Amount"><br><br>
     
                 <button class="btn bg-blue-500 hover:bg-green-600 w-25" onclick="submit()">submit</button>
             </div>
@@ -87,20 +87,20 @@ tbody tr:hover {
         <table>
           <thead>
               <tr>
-                  <th id="inco">Income</th>
+                  <th >Income</th>
                   
+                  <tbody id="resultin">
+                      <tr>
+                          <td>Type</td>
+                          <td>Amount</td>
+                          <td>Date</td>
+                          <td>Balance</td>
+                      </tr>
+                      
+                  </tbody>
               </tr>
           </thead>
-          <tbody>
-              <tr>
-                  <td>Type</td>
-                  <td>Amount</td>
-                  <td>Date</td>
-                  <td>Balance</td>
-              </tr>
-           
-          </tbody>
-          <p id="resultin"></p>
+          
       </table>
         </div>
 
@@ -110,20 +110,21 @@ tbody tr:hover {
         <table>
           <thead>
               <tr>
-                  <th id="expen">Expense</th>
+                  <th>Expense</th>
                   
               </tr>
           </thead>
-          <tbody>
+          <tbody id="resultex">
               <tr>
                   <td>Type</td>
                   <td>Amount</td>
                   <td>Date</td>
                   <td>Balance</td>
+                  <td>Time</td>
               </tr>
            
           </tbody>
-          <p id="resultex"></p>
+
       </table>
         </div>
 

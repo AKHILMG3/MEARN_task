@@ -52,6 +52,7 @@ function submit(){
         <td>${amunt.amount}</td>
         <td>${day}-${month}-${years}</td>
         <td>${balance}</td>
+        <td>${time}</td>
         </tr>
         `
         resultex.innerHTML +=table
