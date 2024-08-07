@@ -64,14 +64,14 @@ tbody tr:hover {
                 <button class="btn bg-blue-500 hover:bg-green-600 w-25" onclick="submit()">submit</button>
             </div>
     
-            <div class="d-flex justify-content-between p-5 m-5">
-                <div class="border-2 border-dark w-full">
-                    <h1 id="inbal" class="font-bold text-2xl ">Balance </h1><br><br>
-                <h2 id="bal" class="font-bold">0 Rs</h2>
+            <div class="d-flex justify-content-between p-5 w-25 m-5">
+                <div class="border-2 border-dark w-100">
+                    <h1 id="inbal" class="  font-bold text-2xl ">Balance </h1><br><br>
+                <h2 id="bal" class="font-bold p-3 m-1">0 Rs</h2>
                 </div>
-                <div class="border-2 border-dark ">
+                <div class="border-2 border-dark w-100">
                 <h1 id="spe" class="font-bold text-2xl">Spent </h1><br><br>
-                <h2 id="spebal" class="font-bold">0 Rs</h2>
+                <h2 id="spebal" class="font-bold p-3 m-1">0 Rs</h2>
                 <div>
     
                 </div>
@@ -82,52 +82,53 @@ tbody tr:hover {
         <br><hr><br>
       <div>
         <div>
-          <h3>View more</h3><br>
-
-        <table>
-          <thead>
-              <tr>
-                  <th >Income</th>
-                  
-                  <tbody id="resultin">
-                      <tr>
-                          <td>Type</td>
-                          <td>Amount</td>
-                          <td>Date</td>
-                          <td>Balance</td>
-                      </tr>
-                      
-                  </tbody>
-              </tr>
-          </thead>
-          
-      </table>
+          <details>
+            <summary>View more</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th >Income</th>
+                        
+                        <tbody id="resultin">
+                            <tr>
+                                <td>Type</td>
+                                <td>Amount</td>
+                                <td>Date</td>
+                                <td>Balance</td>
+                            </tr>
+                            
+                        </tbody>
+                    </tr>
+                </thead>
+                
+            </table>
+            
+      
+             
+               
+      
+              <table>
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="resultex">
+                    <tr>
+                        <td>Type</td>
+                        <td>Amount</td>
+                        <td>Date</td>
+                        <td>Balance</td>
+                        
+                    </tr>
+                 
+                </tbody>
+      
+            </table>
+          </details>
+       
         </div>
-
-        <div>
-         
-
-        <table>
-          <thead>
-              <tr>
-                  <th>Expense</th>
-                  
-              </tr>
-          </thead>
-          <tbody id="resultex">
-              <tr>
-                  <td>Type</td>
-                  <td>Amount</td>
-                  <td>Date</td>
-                  <td>Balance</td>
-                  <td>Time</td>
-              </tr>
-           
-          </tbody>
-
-      </table>
-        </div>
-
     </div>
     </section>
     

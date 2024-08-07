@@ -43,6 +43,8 @@ REACT
                      <link rel="preconnect" href="https://fonts.googleapis.com">
                      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                      <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Ga+Maamli&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+   4 REACT BOOTSRTAP : https://react-bootstrap.github.io/                  
 ...................................................................................................................................................
 
 
@@ -54,4 +56,24 @@ REACT
                         ->if -> && 
                         ->if-> else -> ?:
 
+        4. React Routing : https://reactrouter.com/en/main
+                -> install : npm install react- router-dom
+                -> A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+                -> Rendered anywhere in the app, <Routes> will match a set of child routes from the current location.
+..............................................................................................................................................................................................
+
+
+               MEDIA APP FRONTEND CREATION
+               ...........................
+ 1. project creation : npm create vite@latest media-app-frontend -- --template react
+
+ 2. cd media-app-frontend 
+ 3. npm install 
+ 4. code .
+ 5. run the project : npm run dev
+ 6. clean your project code 
+ 7. install 3rd party libraries 
+    -> React bootstrap 
+    -> Fontawwsome 
+    -> google-fonts 
 
