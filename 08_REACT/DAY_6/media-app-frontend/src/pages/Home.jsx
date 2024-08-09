@@ -6,6 +6,8 @@ import AddVideo from '../Components/AddVideo';
 import { MdHistory } from "react-icons/md";
 import ViewVideo from '../Components/ViewVideo';
 import AddCategory from '../Components/AddCategory'
+import WatchHistory from './WatchHistory';
+
 
 function Home() {
   return (
@@ -17,11 +19,13 @@ function Home() {
         </Col>
 
         <Col>
-        <Link to={'/WatchHistory'} style={{textDecoration:'none'}}><h3 className='m-4'>Watch History <MdHistory /></h3></Link>
+        <Link to={'/WatchHistory'} style={{textDecoration:'none'}}><h3 className='m-4'>Watch History <MdHistory /></h3> </Link>
+        <WatchHistory/>
+        
         </Col>
-      </Row>
+      </Row> <br /><br /> <br /><br />
 
-      <Row className='justify-content-between'>
+      <Row className='justify-content-between m-3 p-2'>
         <Col lg={9}>
         <h3>All Videos</h3>
         <ViewVideo/>

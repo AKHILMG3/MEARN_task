@@ -28,11 +28,11 @@ function AddVideo() {
     backdrop="static"
     keyboard={false}
   >
-    <Modal.Header closeButton>
-      <Modal.Title className='text-dark '><FaCloudUploadAlt className='' />
+    <Modal.Header closeButton className='bg-dark'>
+      <Modal.Title className='text-light '><FaCloudUploadAlt className='' />
         Upload Video</Modal.Title>
     </Modal.Header>
-    <Modal.Body>
+    <Modal.Body className='bg-dark'>
       <p>Please fill following  details</p>
 
       <div>
@@ -41,11 +41,11 @@ function AddVideo() {
         <input type="text" placeholder='Video URL' className='form-control mb-3' />
       </div>
     </Modal.Body>
-    <Modal.Footer>
+    <Modal.Footer className='bg-dark' >
       <Button variant="secondary" onClick={handleClose}>
         Close
       </Button>
-      <Button variant="primary">Upload</Button>
+      <Button variant="warning">Upload</Button>
     </Modal.Footer>
   </Modal>
       </Row>

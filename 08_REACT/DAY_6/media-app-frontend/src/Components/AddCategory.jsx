@@ -10,21 +10,21 @@ function AddCategory() {
   const handleShow = () => setShow(true);
 
   return (
-    <div>  <Button variant="primary" onClick={handleShow}>
+    <div>  <Button variant="warning" onClick={handleShow}>
     Add Category
   </Button>
 
   <Modal show={show} onHide={handleClose}>
-    <Modal.Header closeButton>
-      <Modal.Title>Modal heading</Modal.Title>
+    <Modal.Header closeButton className='bg-dark'>
+      <Modal.Title className='bg-dark'>Add Category</Modal.Title>
     </Modal.Header>
-    <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-    <Modal.Footer>
+    <Modal.Body className='bg-dark'><input type="text" placeholder='Category name' className='form-control' /></Modal.Body>
+    <Modal.Footer className='bg-dark'>
       <Button variant="secondary" onClick={handleClose}>
-        Close
+        Cancel
       </Button>
-      <Button variant="primary" onClick={handleClose}>
-        Save Changes
+      <Button variant="warning" onClick={handleClose}>
+        Add
       </Button>
     </Modal.Footer>
   </Modal></div>
