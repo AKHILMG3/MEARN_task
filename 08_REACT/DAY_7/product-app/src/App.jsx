@@ -1,27 +1,34 @@
 
 import './App.css'
-import Footer from './Components/Footer'
-import { Routes , Route } from 'react-router-dom'
 import Header from './Components/Header'
-import HomePages from './Pages/HomePages'
-import ProductPages from './Pages/ProductPages'
+import Footer from './Components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import ProductPage from './Pages/ProductPage'
 import ViewProduct from './Pages/ViewProduct'
+import PageNotFound from './Pages/PageNotFound'
 
 function App() {
 
   return (
     <>
+    
     <Header/>
-    <Routes>
-      <Route path="/" element={<HomePages/>} />
+        <Routes>
+          {/* http://localhost:5173/ - hOME PAGE */}
+          <Route path="/" element={<HomePage/>}/>
 
-      <Route path="/product" element={<ProductPages/>} />
+          {/* http://localhost:5173/ - PRODUCT PAGE */}
+          <Route path='/products' element={<ProductPage/>}/>
 
-      <Route path="/products/view/:id" element={<ViewProduct/>} />
-    </Routes>
+          {/* http://localhost:5173/ - VIEW A PARTICULAR PRODUCT PAGE*/}
+          <Route path='/products/view/:id' element={<ViewProduct/>}/>
 
+          {/* PAGE NOT FOUND */}
+          <Route path='*' element={<PageNotFound/>}/>
 
-  <Footer/>
+        </Routes>
+    <Footer/>
     </>
   )
 }

@@ -1,0 +1,33 @@
+REACT
+
+
+                  PROJECT CREATION
+
+1. npm create- vite@latest --app -- --template react
+2. cd --app
+3. npm install
+4. npm run dev
+5. code .
+
+
+                     THIRD PARTY INSTALL
+
+1. MDB-bootstrap -  npm i mdb-react-ui-kit
+2. FONT AWESOME - npm i @fortawesome/fontawesome-free
+
+     Import-  import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+              import "@fortawesome/fontawesome-free/css/all.min.css";
+
+3. GOOGLE FONTS -     <link rel="preconnect" href="https://fonts.googleapis.com">
+                   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                   <link href="https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+
+4. REACT bootstrap - npm install react-bootstrap bootstrap
+5. REACT-ICON - npm install react-icons --save
+ 
+6. React Routing : https://reactrouter.com/en/main
+                -> install : npm install react-router-dom
+                -> A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+                -> Rendered anywhere in the app, <Routes> will match a set of child routes from the current location. 
+
+

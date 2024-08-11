@@ -3,13 +3,13 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardTitle,
+    MDBCardSubTitle,
     MDBCardText,
-    MDBCardImage,
-    MDBBtn
+    MDBCardLink
   } from 'mdb-react-ui-kit';
   
 
-function ViewProduct({data}) {
+function ViewUser({data}) {
     console.log(data);
     
   return (
@@ -17,15 +17,16 @@ function ViewProduct({data}) {
         <div className="row">
             {
                 data.map(item=>(
-                    <div className="col m-3 p-5">
-                         <MDBCard>
-      <MDBCardImage src={item.thumbnail} position='top' alt='...' />
+                    <div className="col m-3">
+                        <MDBCard>
       <MDBCardBody>
-        <MDBCardTitle>{item.title}</MDBCardTitle>
+        <MDBCardTitle>{item.id}</MDBCardTitle>
+        <MDBCardSubTitle>Card subtitle</MDBCardSubTitle>
         <MDBCardText>
-         Price : $ {item.price}
+          {item.firstName}
         </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
+        <MDBCardLink href='#'>Card link</MDBCardLink>
+        <MDBCardLink href='#'>Another link</MDBCardLink>
       </MDBCardBody>
     </MDBCard>
                     </div>
@@ -36,4 +37,4 @@ function ViewProduct({data}) {
   )
 }
 
-export default ViewProduct
+export default ViewUser

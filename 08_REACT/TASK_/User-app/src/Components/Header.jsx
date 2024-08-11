@@ -8,7 +8,7 @@ import {
 
 function Header() {
   return (
-    <div><MDBNavbar light bgColor='light'>
+    <div> <MDBNavbar light bgColor='light'>
     <MDBContainer fluid>
       <MDBNavbarBrand href='#'>
         <img

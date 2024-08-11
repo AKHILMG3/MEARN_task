@@ -83,6 +83,7 @@ function Footer() {
         </a>
       </div>
     </MDBFooter>
+
     </div>
   )
 }
