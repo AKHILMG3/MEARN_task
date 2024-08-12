@@ -2,7 +2,7 @@ import React from 'react'
 
 function PageNotFound() {
   return (
-    <div>PageNotFound</div>
+    <div><img src="https://klizos.com/wp-content/uploads/funny-404-error-page-GIF.gif " alt="" /></div>
   )
 }
 

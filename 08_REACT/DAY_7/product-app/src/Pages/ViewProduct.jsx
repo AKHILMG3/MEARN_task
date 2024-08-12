@@ -7,7 +7,9 @@ import {
     MDBCardImage,
     MDBBtn
   } from 'mdb-react-ui-kit';
-  
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+ 
 
 function ViewProduct({data}) {
     console.log(data);
@@ -17,7 +19,7 @@ function ViewProduct({data}) {
         <div className="row">
             {
                 data.map(item=>(
-                    <div className="col m-3 p-5">
+                    <div className="col m-3 " style={{textAlign:"justify"}}>
                          <MDBCard>
       <MDBCardImage src={item.thumbnail} position='top' alt='...' />
       <MDBCardBody>
@@ -25,7 +27,9 @@ function ViewProduct({data}) {
         <MDBCardText>
          Price : $ {item.price}
         </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
+        <Link to={`/products/view/${item.id}`}>
+        <Button>View Products</Button>
+        </Link>
       </MDBCardBody>
     </MDBCard>
                     </div>

@@ -5,7 +5,7 @@ import Footer from './Components/Footer'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import ProductPage from './Pages/ProductPage'
-import ViewProduct from './Pages/ViewProduct'
+import AProduct from './Pages/AProduct'
 import PageNotFound from './Pages/PageNotFound'
 
 function App() {
@@ -22,8 +22,9 @@ function App() {
           <Route path='/products' element={<ProductPage/>}/>
 
           {/* http://localhost:5173/ - VIEW A PARTICULAR PRODUCT PAGE*/}
-          <Route path='/products/view/:id' element={<ViewProduct/>}/>
+          <Route path='/products/view/:id' element={<AProduct/>}/>
 
+          <Route path=''/>
           {/* PAGE NOT FOUND */}
           <Route path='*' element={<PageNotFound/>}/>
 

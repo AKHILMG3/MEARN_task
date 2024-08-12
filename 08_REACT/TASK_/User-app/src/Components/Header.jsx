@@ -12,12 +12,12 @@ function Header() {
     <MDBContainer fluid>
       <MDBNavbarBrand href='#'>
         <img
-          src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
+          src='https://th.bing.com/th/id/OIP.JzfMMdGGxHVW3zepnVulsgHaHw?rs=1&pid=ImgDetMain'
           height='30'
           alt=''
           loading='lazy'
         />
-        MDBootstrap
+        <div className='fw-bold  fs-2'>User Data</div>
       </MDBNavbarBrand>
     </MDBContainer>
   </MDBNavbar></div>

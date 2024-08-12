@@ -11,7 +11,12 @@ function HomePages() {
             <Col className='m-5' style={{textAlign:"justify"}}>
             <h1>User Data</h1>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores ut ex consequatur hic nulla saepe non dolores minus ea expedita officiis aliquid libero quidem nostrum, accusantium amet et neque?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum quod ducimus, dolore cum odio laboriosam iusto totam corporis quae voluptas nesciunt numquam ipsum voluptatibus ex repellat asperiores autem suscipit voluptatum!</p><br />
+            <p>A user is a person who operates or has the right to enjoy something. Here are some examples of how the word "user" is used in sentences:
+            Netflix has considered allowing only one user to login at a time to prevent sharing of subscriptions.
+            The local food pantry surveyed its users and found that 39 lived in their cars and worked in Sedona.
+            Unauthorized users are not allowed on the computers.
+            A user experience (UX) is defined by how well someone can navigate a website and find what they need.
+            A person who started out as a user is now a drug dealer as well</p><br />
             .<Link to={'/user'}><Button >Get start</Button></Link>
             </Col>
         </Row>

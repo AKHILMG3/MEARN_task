@@ -17,7 +17,7 @@ function Header() {
           alt=''
           loading='lazy'
         />
-        MDBootstrap
+        SNS
       </MDBNavbarBrand>
     </MDBContainer>
   </MDBNavbar></div>
