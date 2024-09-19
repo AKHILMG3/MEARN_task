@@ -59,11 +59,6 @@ section h1{
     background-color: rgba(255, 255, 255, 0.24);
     padding: 30px;
 }
-#text{
-    position: absolute;
-    top: 220%;
-    left: 90%;
-}
 span{
     font-size: xx-large;
     color: rgba(255, 3, 3, 0.562);
@@ -140,16 +135,84 @@ h3{
 input{
     width: 300PX;
     height: 0px;
-    padding: 30px;
+    padding: 13px;
 }
 button{
-    padding: 10px;
-    margin: 20px;
+    
+    padding: 5px;
+    margin: 10px;
     width: 150PX;
     color:white;
-    background-color: rgba(95, 93, 93, 0.904)
+    background-color: rgba(0, 60, 255, 0.904)
 }
 
+/* Base styles go here */
+
+@media screen and (max-width: 400px) {
+    header {
+        padding: 10px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    ul li {
+        margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
+    section h1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+    }
+    
+    .row {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .col img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .col1 {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
 
 
 

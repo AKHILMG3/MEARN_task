@@ -1,0 +1,114 @@
+/* General styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: rgba(138, 37, 37, 0.274);
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(165, 42, 42, 0.404);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li {
+    margin: 20px;
+    list-style: none;
+}
+
+h1 {
+    font-family: "Notable", sans-serif;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 3px 4px 5px white;
+    text-decoration: underline;
+}
+
+#banner {
+    width: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/12/50/bookcases-1869616_1280.jpg");
+    height: 800px;
+    background-attachment: fixed;
+    object-fit: fill;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+
+.books {
+    display: flex;
+    margin: 1px;
+    padding: 0px;
+}
+
+.cls img {
+    padding: 10px;
+    width: 100px;
+    margin: 10px;
+}
+
+.cls {
+    border: 2px solid black;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(85, 17, 17, 0.342);
+    height: 400px;
+    width: 270px;
+}
+
+.row {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+button {
+    padding: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.footer {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.foot {
+    margin: 20px;
+    padding: 20px;
+    padding-top: 5px;
+}
+
+.foot h3 {
+    text-decoration: underline;
+}

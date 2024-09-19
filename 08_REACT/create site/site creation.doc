@@ -3,7 +3,7 @@ REACT
 
                   PROJECT CREATION
 
-1. npm create- vite@latest --app -- --template react
+1. npm create vite@latest --app -- --template react
 2. cd --app
 3. npm install
 4. npm run dev
@@ -29,5 +29,34 @@ REACT
                 -> install : npm install react-router-dom
                 -> A <BrowserRouter> stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
                 -> Rendered anywhere in the app, <Routes> will match a set of child routes from the current location. 
+
+
+                MEDIA APP FRONTEND CREATION 
+...........................................................
+
+1. project creation : npm create vite@latest media-app-frontend -- --template react
+2. cd media-app-frontend
+3. npm install
+4. code .
+5. Run the project : npm run dev
+6. Clean your project 
+7. Install 3rd party librairies
+   -> React bootstrap : https://react-bootstrap.github.io/
+                        -bootswatch
+                  -> Font Awesome 
+                  -> google-fonts
+             8. Designing completed.
+
+
+             MEDIA APP BACKEND CREATION USING JSON-SERVER 
+.................................................................................................................................
+
+    1.create a folder named as media-app-backend
+    2. inside it , create a package.json file => npm init or npm init -y
+    3. install json-server => npm install json-server 
+    4. create db.json file
+    5. run the file => npx json-server db.json
+
+
 
 

@@ -22,7 +22,7 @@ function App() {
             <Route path='/home' element={<Home/>}/>
 
                   {/* watch history page path : http://localhost:5173/whistory */}
-                  <Route path='/watch-history' element={<WatchHistory/>}/>
+                  <Route path='/watchhistory' element={<WatchHistory/>}/>
 
                   <Route path='*' element={<PageNotFound/>}/>          
     </Routes>

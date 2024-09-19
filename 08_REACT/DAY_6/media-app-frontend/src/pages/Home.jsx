@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
@@ -10,17 +10,20 @@ import WatchHistory from './WatchHistory';
 
 
 function Home() {
+
+  const [addVideoResponse,setaddVideoResponse] = useState([])
+
   return (
     <div>
       <Row className=' justify-content-between m-2 p-2'>
         <Col className='d-flex'>
         <h3 className='m-4 '>Upload New Videos</h3>
-        <AddVideo/>
+        <AddVideo setaddVideoResponse={setaddVideoResponse}/>
         </Col>
 
         <Col>
         <Link to={'/WatchHistory'} style={{textDecoration:'none'}}><h3 className='m-4'>Watch History <MdHistory /></h3> </Link>
-        <WatchHistory/>
+        
         
         </Col>
       </Row> <br /><br /> <br /><br />
@@ -28,7 +31,7 @@ function Home() {
       <Row className='justify-content-between m-3 p-2'>
         <Col lg={9}>
         <h3>All Videos</h3>
-        <ViewVideo/>
+        <ViewVideo addVideoResponse={addVideoResponse}/>
 
         </Col>
 

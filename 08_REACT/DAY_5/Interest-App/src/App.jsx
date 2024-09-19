@@ -25,7 +25,7 @@ function App() {
   return (
     <>
    <div className="row">
-    <div className="col-2">   </div>
+    
 
       <div className="col-8">
         <div className='border border-black rounded m-5 p-5 text-center' style={{background:"greenyellow"}}>
@@ -37,9 +37,9 @@ function App() {
             <p>Your Total Interest</p>
           </div>
           <div className='d-flex  justify-content-between flex-column w-75 mx-auto my-3'>
-          <TextField onChange={e=>setAmount(e.target.value)} className='mb=2' id="filled-basic" label="Amount" variant="filled" />
-          <TextField onChange={e=>setYear(e.target.value)} className='mb=2' id="filled-basic" label="Year" variant="filled" />
-          <TextField onchange={e=>setRate(e.target.value)} className='mb=2'  id="filled-basic" label="Rate" variant="filled" />
+          <TextField value={amount} onChange={e=>setAmount(e.target.value)} className='mb=2' id="filled-basic" label="Amount" variant="filled" />
+          <TextField  value={year} onChange={e=>setYear(e.target.value)} className='mb=2' id="filled-basic" label="Year" variant="filled" />
+          <TextField  value={rate} onchange={e=>setRate(e.target.value)} className='mb=2'  id="filled-basic" label="Rate" variant="filled" />
           </div>
 
           <div className='d-flex justify-content-evenly'>
