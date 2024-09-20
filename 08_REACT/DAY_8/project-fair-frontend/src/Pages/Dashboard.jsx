@@ -1,33 +1,38 @@
 import React from 'react'
-import Col from 'react-bootstrap/esm/Col'
-import Row from 'react-bootstrap/esm/Row'
-import { MDBBtn } from 'mdb-react-ui-kit';
-import { FaEdit } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
+import Add from '../Components/Add'
+import View from '../Components/View'
+import Profile from '../Components/Profile'
+
+
 
 
 function Dashboard() {
   return (
-    <div className='p-3 m-3'>
+    <div>
+      <div className="row p-5 d-flex justify-content-between">
+        <h2>Welcome to User</h2>
+        <div className="col-6  shadow bg-light p-5 m-4" >
+          <div className="row">
+            <div className="col-6"> 
+              <h2>My Project</h2>
+            </div>
+            <div className="col-6">
+              <button className='btn btn-grey' style={{float:'right'}}><Add/></button>
+            </div>
+          </div>
 
-<h4>Welcome to ABC</h4>
-      <Row className='p-3 '>
-        <Col>
-        <div className='d-flex justify-content-between '>
-          <h5>My Project</h5>
-          <MDBBtn outline className='mx-2' color='dark'>
-        Dark
-      </MDBBtn></div>
+          <div className="row mt-3 ">
+            <div className="col">
+              <View/>
+            </div>
 
-      <div className='d-flex justify-content-between p-3 m-2 bg-light'>
-      <h6>Media app</h6>
-        <div className='d-flex'> <FaEdit />  <FaGithubSquare />  <MdDelete /> </div> </div>
-        </Col>
+          </div>
 
-        <Col></Col>
-      </Row>
-      
+          <div className="col-4 shadow   bg-light p-5 ">
+            <Profile/>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

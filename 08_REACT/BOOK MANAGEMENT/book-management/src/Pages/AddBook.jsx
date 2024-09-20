@@ -1,22 +1,28 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { addBook } from '../Redux/actions';
+import { nanoid } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 
 
 
-function AddBook() {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
- 
-  const handleAdd = (e) => {
+
+
+
+const AddBook = () => {
+  const [ title,setTitle] = useState('');
+  const [author,setAuthor] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) =>{
     e.preventDefault();
-    if (title && author) {
-      dispatch(addBook({ id: Date.now(), title, author }));
-    }
-  
+    dispatch(addBook({id:nanoid(),title,author}));
+    navigate('/books')
   }
-
+  
+  
 
   return (
     <div><br /> <br />
@@ -24,10 +30,10 @@ function AddBook() {
        
           <h3 className='fw-bold'>Add Book</h3><br />
       
-          <input type="text" className='form-control w-75' value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Book Title' /><br /> <br />
-          <input type="text" className='form-control w-75' value={author} onChange={(e) => setAuthor(e.target.value)} placeholder='Author' /><br /><br />         
+          <input id='bookTitle' type="text" className='form-control w-100' value={title} onChange={(e) => setTitle(e.target.value)} placeholder=' Enter Book Title' /><br /> <br />
+          <input id='authorName' type="text" className='form-control w-100' value={author} onChange={(e) => setAuthor(e.target.value)} placeholder='Enter Author Name' /><br /><br />         
         
-        <Link to={'/viewBook'}> <MDBBtn onClick={handleAdd}>Add Book</MDBBtn> </Link>
+        <Link to={'/viewBook'}> <MDBBtn onSubmit={handleSubmit}>Add Book</MDBBtn> </Link>
         
         <br /> <br />
       </div><br /> <br />

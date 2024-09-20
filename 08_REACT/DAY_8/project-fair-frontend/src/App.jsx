@@ -6,8 +6,7 @@ import Home from './Pages/Home'
 import Project from './Pages/Project'
 import Dashboard from './Pages/Dashboard'
 import Auth from './Pages/Auth'
-import Login from './Components/Login'
-import Register from './Components/Register'
+
 import PageNotFound from './Pages/PageNotFound'
 
 
@@ -21,9 +20,8 @@ function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/project' element={<Project/>}/>
-      <Route path='/auth' element={<Auth/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register' element={<Register/>}/>
+      <Route path='/login' element={<Auth/>}/>
+      <Route path='/register' element={<Auth register/>}/>
       <Route path='*' element={<PageNotFound/>}/>
 
     </Routes>

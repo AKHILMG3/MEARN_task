@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
+import ProjectCard from '../Components/ProjectCard';
+
+
 
 
 function Home() {
+ 
   return (
     <div>
        <div>
@@ -23,6 +27,8 @@ function Home() {
        <div>
 
         <h3 className='text-center p-3 m-3'>Explore Our Project</h3><hr />
+
+        <ProjectCard/>
 
         <div>
           <h3 className='text-center  p-2 m-2'>Our Services</h3>

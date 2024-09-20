@@ -1,3 +1,10 @@
 .container{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.view{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.col{
+    text-align: justify;
+    align-items: center;
+}
