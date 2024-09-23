@@ -54,6 +54,7 @@ a:hover {
     object-fit: fill;
 }
 
+
 #head {
     display: flex;
     justify-content: space-between;
@@ -64,7 +65,7 @@ a:hover {
 .books {
     display: flex;
     margin: 1px;
-    padding: 0px;
+    padding: 10px;
 }
 
 .cls img {
@@ -78,7 +79,7 @@ a:hover {
     margin: 30px;
     color: rgb(0, 0, 0);
     background-color: rgba(85, 17, 17, 0.342);
-    height: 350px;
+    height: 370px;
     width: 270px;
 }
 
@@ -91,12 +92,14 @@ a:hover {
 button {
     padding: 5px;
     margin: 5px;
-    border-radius: 10%;
+    border-radius: 6%;
+    border: 5PX;
+    
     
 }
 
 button:hover {
-    background-color:rgb(255, 208, 0);
+    background-color:rgba(0, 0, 0, 0.286);
 }
 
 .footer {
@@ -108,7 +111,8 @@ button:hover {
 .foot {
     margin: 20px;
     padding: 20px;
-    padding-top: 5px;
+    padding-left: 400px;
+
 }
 
 .foot h3 {

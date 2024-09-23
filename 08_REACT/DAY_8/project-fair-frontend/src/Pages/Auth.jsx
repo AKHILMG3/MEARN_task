@@ -8,9 +8,9 @@ function Auth({register}) {
   
 
   return (
-    <div>
-      <div className="row p-5 m-5">
-        <div className="col-6"><img src={AuthImage} alt="" /></div>
+    <div className='p-5 m-5'>
+      <div className="row border border-1 shadowntext-light m-2 rounded p-5 ">
+        <div className="col-6"><img src={AuthImage} width={'400'} alt="" /></div>
         <div className="col-6">
           <h3>Project Fair</h3><br />
           <h4>Sign {register? "Up" : "In"}</h4>

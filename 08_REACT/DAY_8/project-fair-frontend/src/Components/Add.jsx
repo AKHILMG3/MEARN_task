@@ -17,7 +17,8 @@ function Add() {
     const toggleOpen = () => setStaticModal(!staticModal);
 
   return (
-    <div><MDBBtn onClick={toggleOpen}>Add</MDBBtn>
+    <div >
+      <MDBBtn onClick={toggleOpen}>Add</MDBBtn>
 
     <MDBModal staticBackdrop tabIndex='-1' open={staticModal} onClose={() => setStaticModal(false)}>
       <MDBModalDialog>
@@ -27,11 +28,11 @@ function Add() {
             <MDBBtn className='btn-close' color='none' onClick={toggleOpen}></MDBBtn>
           </MDBModalHeader>
           <MDBModalBody> 
-            <div className="row ">
+            <div className="row d-flex ">
                 <div className="col-6 p-2 m-3">
                     <label >
                         <input type="file" style={{display:'none'}} />
-                        <img src="https://th.bing.com/th/id/OTP.HefJP8AoKvdJQhyonaQ67QHaE8?rs=1&Pid=ImgDetMain" width={'100%'} alt="" />
+                        <img src="https://i.ytimg.com/vi/SpNXB9lkBX4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gJygzMA8=&rs=AOn4CLCH_IFg-srHqCt622KCqKACRaumJw" width={'100%'} alt="" />
                     </label>
                 </div>
             </div>
@@ -48,10 +49,10 @@ function Add() {
             </div>
           </MDBModalBody>
           <MDBModalFooter>
-            <MDBBtn color='secondary' onClick={toggleOpen}>
+            <MDBBtn color='secondary' type='submit' onClick={toggleOpen}>
               Cancel
             </MDBBtn>
-            <MDBBtn className='bg-light'>Add</MDBBtn>
+            <MDBBtn className='bg-light' type='submit'>Add</MDBBtn>
           </MDBModalFooter>
         </MDBModalContent>
       </MDBModalDialog>

@@ -59,6 +59,11 @@ section h1{
     background-color: rgba(255, 255, 255, 0.24);
     padding: 30px;
 }
+#text{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
 span{
     font-size: xx-large;
     color: rgba(255, 3, 3, 0.562);
@@ -133,22 +138,28 @@ h3{
     margin: 20px;
 }
 input{
-    width: 300PX;
-    height: 0px;
-    padding: 13px;
+    width: 400px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
 }
 button{
-    
+    border-radius: 100px;
     padding: 5px;
     margin: 10px;
     width: 150PX;
     color:white;
     background-color: rgba(0, 60, 255, 0.904)
 }
+button:hover{
+    background-color: green;
+}
 
-/* Base styles go here */
-
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
     header {
         padding: 10px;
     }
@@ -157,64 +168,55 @@ button{
         flex-direction: column;
         align-items: center;
     }
-    
+
     ul {
         flex-direction: column;
         padding: 0;
     }
-    
+
     ul li {
         margin: 10px 0;
     }
-    
-    h1 {
-        font-size: 1.5em;
-        text-align: center;
-    }
-    
+
     section h1 {
-        position: relative;
-        top: auto;
-        left: auto;
-        text-align: center;
-        padding: 20px;
-        font-size: 1.2em;
+        font-size: 20px;
+        left: 5%;
+        top: 5%;
     }
-    
+
+    #text {
+        top: 100px;
+        left: 5px;
+    }
+
     .row {
         flex-direction: column;
-        align-items: center;
         margin: 10px;
     }
-    
-    .col img {
-        width: 100%;
-        height: auto;
-    }
-    
+
     .col1 {
-        padding: 10px;
-        margin: 10px 0;
+        margin: 5px;
+        width: 90%;
     }
-    
+
+    input {
+        width: 30%;
+    }
+
+    button {
+        width: 40%;
+        padding: 10px;
+        
+    }
+
     .footer {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 18px;
     }
     
-    .contact input {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    button {
-        width: 100%;
-        padding: 10px;
-        font-size: 0.9em;
-    }
+
 }
-
-
-
-
- 
