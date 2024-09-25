@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+  font-family: "Rubik Mono One", monospace;
+  padding: 15PX;
+}
+h2:hover{
+  text-decoration: underline;
+  
+}
+
+h2{
+  margin: 10px;
+  padding: 10px;
+  
+}
+body{
+  
+  margin: 0px;
+  padding: 0px;
+}
+header{
+  position: sticky;
+  padding: 0px;
+  margin: 0px;
+  
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul li{
+  margin: 15px;
+  list-style: none;
+}
+#banner {
+  width: 100%;
+  background-image: url("https://cdn.pixabay.com/photo/2024/02/16/20/13/burger-8578288_1280.jpg");
+  height: 700px;
+  background-attachment: fixed;
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+#type{
+  text-align: justify;
+  margin: 30px;
+  padding:10px;
+}
+.row{
+  display:flex;
+  justify-content: space-evenly;
+  margin: 40px;
+}
+
+.col:hover{
+  box-shadow: 2px 3px 4px 5px;
+}
+.rup{
+  text-decoration: line-through;
+}
+button{
+  align-items: center; 
+  text-align: center;
+}
+.footer{
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+
+}
+.foot{
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+.fname{
+  font-family: "Spicy Rice", serif;
+}
+#video{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
