@@ -17,7 +17,6 @@ h2{
   
 }
 body{
-  
   margin: 0px;
   padding: 0px;
 }
@@ -43,7 +42,7 @@ ul li{
 }
 #banner {
   width: 100%;
-  background-image: url("https://cdn.pixabay.com/photo/2024/02/16/20/13/burger-8578288_1280.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2017/02/15/10/39/salad-2068220_1280.jpg");
   height: 700px;
   background-attachment: fixed;
   object-fit: fill;
@@ -51,10 +50,21 @@ ul li{
   background-size: cover;
   
 }
+.ban{
+  position: absolute;
+  top: 180px;
+  left: 20px;
+  padding: 20px;
+}
+
+
 #type{
   text-align: justify;
   margin: 30px;
   padding:10px;
+}
+.bite{
+  font-family: "Pacifico", cursive;
 }
 .row{
   display:flex;
@@ -63,7 +73,11 @@ ul li{
 }
 
 .col:hover{
-  box-shadow: 2px 3px 4px 5px;
+  box-shadow: 2px 3px 4px ;
+}
+.col img{
+  border-radius: 10px;
+  padding: 5px;
 }
 .rup{
   text-decoration: line-through;
@@ -91,6 +105,81 @@ button{
   padding: 0px;
   margin: 0px;
 }
+
+
+@media screen and (max-width: 400px) {
+  h1 {
+      font-size: 18px;
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 16px;
+      padding: 8px;
+      margin: 5px;
+  }
+
+  #banner {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .ban {
+      top: 120px;
+      left: 10px;
+      padding: 10px;
+  }
+
+  #type {
+      margin: 15px;
+      padding: 5px;
+  }
+
+  .row {
+      display: block;
+      margin: 20px 0;
+  }
+
+  .col {
+      margin-bottom: 20px;
+  }
+
+  .col img {
+      width: 100%;
+      padding: 2px;
+  }
+
+  ul {
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+  }
+
+  ul li {
+      margin: 5px 0;
+  }
+
+  button {
+      width: 100%;
+  }
+
+  .footer {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .foot {
+      text-align: center;
+      padding: 5px;
+  }
+
+  #video {
+      width: 100%;
+      padding: 0;
+  }
+}
+
 
 
 

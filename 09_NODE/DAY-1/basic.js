@@ -21,7 +21,7 @@ app.use(express.json())
 
 //5 getting data 
 
-let posts = [
+let posts    = [
     {
         "userId": 1,
         "id": 1,
