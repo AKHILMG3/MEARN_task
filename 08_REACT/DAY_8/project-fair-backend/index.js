@@ -2,12 +2,17 @@
 
 require('dotenv').config()
 
-const express = require('express')
 //2 import express  
+const express = require('express')
 
-//import DB
+//3 import cors
 const cors = require('cors')
+
+//9 import DB
 require('./DB/connection')
+
+//10 import router
+const router = require('./Routes/router')
 
 //4 create an application using express 
 const pfServer = express()
@@ -15,6 +20,7 @@ const pfServer = express()
 //5 use 
 pfServer.use(cors())
 pfServer.use(express.json())
+pfServer.use(router)
 
 //6 Define port number
 const PORT = 3000 || process.env.PORT

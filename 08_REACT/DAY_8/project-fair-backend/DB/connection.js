@@ -1,5 +1,5 @@
 //1 import mongoose 
-const mongoose = require('moongoose')
+const mongoose = require('mongoose')
 
 //2 create a connection string
 const connection_string = process.env.CONNCECTION_STRING
@@ -9,7 +9,6 @@ mongoose.connect(connection_string).then((res)=>{
     console.log("mongodb connection establish with psServer");
     
 }).catch((err)=>{
-    console.log("Mongodb connectin error:"+
-        err);
+    console.log("Mongodb connectin error:" + err);
     
 })

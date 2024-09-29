@@ -38,7 +38,8 @@ function ViewBook() {
         <td>{book.title}</td>
         <td>{book.author}</td>
         <td> <Link to={`/editBook/${book.id}`}> <FaEdit /></Link></td>
-        <td> <button onClick={()=> handleDelete(book.id)}><MdDelete /></button></td>
+        <Link to={`/deleteBook/${book.id}`}><td> <button onClick={()=> handleDelete(book.id)}><MdDelete /></button></td>
+        </Link>
       </tr>
 
        )) }

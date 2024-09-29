@@ -129,3 +129,6 @@
                                        - Routes - A component that groups together multiple Route elements.use Routes to define a set of where routes,  each Route inside it represents a different path and its associated component. 
 
                                        - Route - A component that defines a path and the component to render when the path matches the current URL.use Route within Routes to specify the URL path and the component that should be rendered when the path is accessed.
+                    8.React-Toastify 
+                                    Site : https://www.npmjs.com/package/react-toastify     
+                                     Install : npm i react-toastify                   

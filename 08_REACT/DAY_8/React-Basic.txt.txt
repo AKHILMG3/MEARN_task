@@ -32,6 +32,8 @@ Backend for PROJECT FAIR
 
     4. Create  .evn file and .gitigore
     5. Create index.js file (root file)
+
+    6.npm install --save react-toastify
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -67,10 +69,20 @@ MVC Architecture
  -->import express and create router object 
  -->export router from the file
  -->import router in index.js 
- 2) controllers : used to implement logic to 
+
+ 2) controllers : used to implement logic to resolve client requests 
+
+  3) Models : to define schema and model for mongo db collection using mongoose 
+                                                                          ->Create a folder 
+                                                                          ->Create a js file to define schema and mode; for mongodb collection
 
 
 
  --------------------------------------------------------------------------------------------------------------------------------------------------
 
-                                      Moongoose
+ 7. create a DB in MongoDB
+ 8.Copy connection string into.env file 
+ 9. create a DB folder in background , create a connection.js file 
+ 
+
+ 
