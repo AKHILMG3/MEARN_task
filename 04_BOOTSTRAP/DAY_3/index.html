@@ -9,6 +9,9 @@
 
     <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 
     <!-- boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -24,60 +27,78 @@
         padding: 0px;
         font-family: "Raleway", sans-serif;
     }
+    h2{
+      font-family: "Concert One", sans-serif;
+    }
+   
+ 
+    @media only screen and (max-width: 400px) {
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
 
-    @media (max-width: 400px) {
-    .navbar-brand {
-      font-size: 20px;
+      .navbar .fa-couch {
+        font-size: 1.5rem;
+      }
+
+      .carousel-item img {
+        height: auto;
+        max-width: 100%;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .col {
+        padding: 5px;
+      }
+
+      .rounded-circle {
+        height: 150px;
+        width: 150px;
+      }
+
+      .row .col-3 img {
+        height: 150px;
+        width: 150px;
+      }
+
+      .container h3 {
+        font-size: 1.2rem;
+      }
+
+      .col-2 img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .col-2 h5 {
+        font-size: 1rem;
+      }
+
+      .col-2 p, .col-2 button {
+        font-size: 0.8rem;
+      }
+
+      video {
+        width: 100%;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+
+      footer h6 {
+        font-size: 1rem;
+      }
+
+      footer .text-uppercase {
+        font-size: 1rem;
+      }
     }
 
-    .navbar i {
-      font-size: 24px;
-    }
 
-    /* Adjust carousel images */
-    .carousel-item img {
-      height: 150px;
-      object-fit: cover;
-    }
-
-    /* Reduce padding for sections */
-    .container h3 {
-      font-size: 18px;
-    }
-
-    .container p {
-      font-size: 14px;
-    }
-
-    /* Resize circular images */
-    .col img {
-      height: 100px;
-      width: 100px;
-    }
-
-    /* Adjust customer stories layout */
-    .col-2 {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    /* Reduce video size */
-    video {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Footer adjustments */
-    footer .col-md-3, footer .col-md-2, footer .col-md-4 {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .footer .text-center {
-      font-size: 14px;
-    }
-  }
 </style>
 
 </head>
@@ -86,8 +107,8 @@
     <nav class="navbar bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-light fw-bolder m-2" href="#">
-            <i class="fa-solid fa-couch fa-bounce text-light fs-1"></i>
-            Furniture World
+            <h2><i class="fa-solid fa-couch fa-bounce text-light fs-2"></i>
+            Furniture World</h2>
           </a>
           <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
             Log in <i class="fa-solid fa-user fa-beat-fade"></i>
@@ -196,7 +217,7 @@
   <br><br><hr>
   <video src="./video/201985-916894647_small.mp4" autoplay muted loop width="100%"></video><br><br>
   <hr>
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer  class="text-center  text-lg-start bg-dark  text-light ">
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
@@ -228,7 +249,7 @@
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Describe furniture
+            <i class=" fa-solid fa-couch me-3"></i>Describe furniture
           </h6>
           <p>
             Furniture, household equipment, usually made of wood, metal, plastics, marble, glass, fabrics, or related materials and having a variety of different purposes. 
@@ -287,7 +308,7 @@
 
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2024 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">furnitureworid.com</a>
+    <a class="text-reset fw-bold" href="x">furnitureworid.com</a>
   </div>
 </footer>
   

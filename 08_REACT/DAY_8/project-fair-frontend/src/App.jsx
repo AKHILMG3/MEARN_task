@@ -5,9 +5,9 @@ import { Routes , Route } from 'react-router-dom'
 import Home from './Pages/Home'
 import Project from './Pages/Project'
 import Dashboard from './Pages/Dashboard'
-import Auth from './Pages/Auth'
-
+import Auth from './Pages/Auth' 
 import PageNotFound from './Pages/PageNotFound'
+
 
 
 

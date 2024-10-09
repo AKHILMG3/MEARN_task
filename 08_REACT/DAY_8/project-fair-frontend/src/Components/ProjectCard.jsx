@@ -20,7 +20,10 @@ import {
   } from 'mdb-react-ui-kit';
 
 
-function ProjectCard() {
+function ProjectCard(Projects) {
+  console.log(Projects);
+  
+
     const [basicModal, setBasicModal] = useState(false);
 
     const toggleOpen = () => setBasicModal(!basicModal);
@@ -30,9 +33,9 @@ function ProjectCard() {
     <div>
         <div className='row p-3 m-3'>
         <MDBCard onClick={toggleOpen} style={{width:"350px", height:"400px"}}>
-      <MDBCardImage className=' p-2' src='https://gdcitsolutions.com/wp-content/uploads/Top-10-IT-Careers_800x550_3.png' position='top'  alt='...' />
+      <MDBCardImage className=' p-2' src={Projects.ProjectImg} position='top'  alt='...' />
       <MDBCardBody>
-        <MDBCardTitle className='text-center'>Card title</MDBCardTitle>
+        <MDBCardTitle className='text-center'>{Projects.title}</MDBCardTitle>
       </MDBCardBody>
     </MDBCard>
       <MDBModal open={basicModal} onClose={() => setBasicModal(false)} tabIndex='-1'>

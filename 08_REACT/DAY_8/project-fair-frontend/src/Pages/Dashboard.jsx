@@ -3,13 +3,14 @@ import Add from '../Components/Add'
 import View from '../Components/View'
 import Profile from '../Components/Profile'
 
-
-
-
 function Dashboard() {
+  const user = JSON.parse(sessionStorage.getItem('user'))
+  console.log(user);
+  let userName = user.username
+  
   return (
    <div className="row p-5 m-5">
-    <h2>Welcome User</h2>
+    <h2>Welcome {userName}</h2>
     <div className="col-7 bg-light shadow p-5 m-5">
       <div className="row d-flex justify-content-evenly">
         <div className="col-6"> 

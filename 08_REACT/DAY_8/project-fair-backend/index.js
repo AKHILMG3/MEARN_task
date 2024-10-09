@@ -20,10 +20,11 @@ const pfServer = express()
 //5 use 
 pfServer.use(cors())
 pfServer.use(express.json())
+//pfServer.use(applicationMiddleware)
 pfServer.use(router)
 
 //6 Define port number
-const PORT = 3000 || process.env.PORT
+const PORT = 5000 || process.env.PORT
 
 //7 Define listen
 pfServer.listen(PORT,(req,res)=>{
