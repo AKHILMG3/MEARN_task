@@ -1,0 +1,18 @@
+<div class=" container shadow border row m-5">
+    <div class="col-6">
+        <img src="https://static.vecteezy.com/system/resources/previews/003/689/228/original/online-registration-or-sign-up-login-for-account-on-smartphone-app-user-interface-with-secure-password-mobile-application-for-ui-web-banner-access-cartoon-people-illustration-vector.jpg" height="500px" width="100%" alt="">
+    </div>
+    <div class="col-6 p-5 mt-5">
+        <h2 class="mt-5">Login Here...</h2><br>
+        <form (ngSubmit)="login()">
+        <input type="email" [(ngModel)]="Useremail" name="email" class="form-control p-2 my-3 w-75" placeholder="Enter your email">
+        <input type="password" [(ngModel)]="Userpassword" name="password"   class="form-control p-2 my-3 w-75" placeholder="Enter your Password">
+        
+
+        <div class="button button-center"> 
+            <button class="btn btn-outline-success p-2">Submit</button>
+        </div>
+    </form>
+
+    </div>
+</div>

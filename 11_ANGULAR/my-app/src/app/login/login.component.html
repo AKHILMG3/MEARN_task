@@ -1,0 +1,25 @@
+<div class="row border border-2  p-5 w-100 justify-content-evenly">
+    <div class="col-6">
+        <img [src] = loginImg  width="100%" alt="">
+    </div>
+    <div class="col-6">
+    
+            <form class="m-3 p-3">
+
+                <h1 class="m-3"><p>{{msg}}</p></h1><br><br>
+                
+                <div class="mb-3 w-50">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3 w-50">
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button (click)="btnClick()" routerLink="home" type="submit" class="btn btn-primary">Submit</button>
+              </form><br><br><br>
+    </div>
+</div>

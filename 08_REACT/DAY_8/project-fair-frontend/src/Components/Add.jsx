@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import userImg from '../assets/auth-png.svg'
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { addProjectContextResponse } from '../ContextAPI/ContextShare';
+import { addProject } from '../Services/ALLAPI';
 
 
 import {
@@ -14,13 +16,18 @@ import {
     MDBModalBody,
     MDBModalFooter,
   } from 'mdb-react-ui-kit';
-import { addProject } from '../Services/ALLAPI.';
 
   
 
 function Add() {
+
+  const{ setAddProjectsRes} = useContext(addProjectContextResponse)
+
+
     const [staticModal, setStaticModal] = useState(false);
-    const toggleOpen = () => setStaticModal(!staticModal);
+    const toggleOpen = () => {setStaticModal(!staticModal);
+      setPreview(userImg)
+    }
 
     const [ProjectDetails,setProjectDetails] = useState({
       title:'',language:'',github:'',website:'',overview:'',ProjectImg:''
@@ -80,9 +87,11 @@ function Add() {
         }
         try{
           //api calling
+
           const response = await addProject(reqBody,reqHeader)
           console.log(response);
           if(response.status==200){
+            setAddProjectsRes(response.data)
             toast.success('project Add Successfully', {
               position: "top-center",
               autoClose: 5000,
@@ -103,7 +112,7 @@ function Add() {
                 overview:"",
                 ProjectImg:""
               })
-              setPreview("")
+              setPreview("userImg")
 
           }
           else{

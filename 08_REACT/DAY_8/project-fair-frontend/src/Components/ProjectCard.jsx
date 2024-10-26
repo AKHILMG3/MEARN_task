@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
+import { serverURL } from '../Services/serverURL';
 
 import {
     MDBCard,
@@ -18,22 +19,20 @@ import {
     MDBModalBody,
     MDBModalFooter,
   } from 'mdb-react-ui-kit';
+// import projects from '../../../project-fair-backend/Models/projectSchema';
 
 
 function ProjectCard(Projects) {
   console.log(Projects);
-  
 
     const [basicModal, setBasicModal] = useState(false);
-
     const toggleOpen = () => setBasicModal(!basicModal);
-  
 
   return (
     <div>
         <div className='row p-3 m-3'>
         <MDBCard onClick={toggleOpen} style={{width:"350px", height:"400px"}}>
-      <MDBCardImage className=' p-2' src={Projects.ProjectImg} position='top'  alt='...' />
+      <MDBCardImage className=' p-2' src={Projects? `${serverURL}/uploads/${projects.projectImg}`:'https://cdn.pixabay.com/photo/2024/05/01/17/56/student-8732859_1280.png'} position='top'  alt='...' />
       <MDBCardBody>
         <MDBCardTitle className='text-center'>{Projects.title}</MDBCardTitle>
       </MDBCardBody>

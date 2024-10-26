@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AuthImage from '../assets/auth-png.svg'
 import { Link, useNavigate } from 'react-router-dom';
-import { loginAPI, registerAPI } from '../Services/ALLAPI.';
+import { loginAPI, registerAPI } from '../Services/ALLAPI';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-bootstrap/Spinner';

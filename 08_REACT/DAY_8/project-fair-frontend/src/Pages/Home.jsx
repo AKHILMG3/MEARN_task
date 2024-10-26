@@ -1,16 +1,40 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MDBBtn } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../Components/ProjectCard';
-
-
-
+import { getHomeProjectsAPI } from '../Services/ALLAPI';
 
 function Home() {
 
   let token = sessionStorage.getItem('token');
+
+  const getHomeProjects = async()=>{
+
+    const [projects,setallProjects] = useState([])
+      try{
+        const HomeProjects = await getHomeProjectsAPI()
+        console.log(HomeProjects);
+        if(HomeProjects.status==200){
+          setallProjects(HomeProjects.data)
+        }
+        else{
+          console.log("cant get projects");
+          
+        }
+        
+      }
+      catch(error){
+        console.log(error);
+       
+    } 
+      }
+
+      useEffect(()=>{
+        getHomeProjects()
+      },[])
+
  
   return (
     <div>
@@ -37,7 +61,20 @@ function Home() {
        <div>
 
         <h3 className='text-center p-3 m-3'>Explore Our Project</h3><hr />
-        <ProjectCard/>
+        <div className="row">
+          {  
+          projects.length > 0 ? projects.map(item=>(
+            <div className="col">
+              <ProjectCard projects={item}/>
+            </div>
+
+          )):<p className='text-danger fw-bolder'>
+          Can't fetch data
+        </p>
+            
+            }
+        </div>
+       
 
         <div>
 

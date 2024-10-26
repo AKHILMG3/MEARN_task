@@ -23,6 +23,8 @@ pfServer.use(express.json())
 //pfServer.use(applicationMiddleware)
 pfServer.use(router)
 
+pfServer.use('/uploads', express.static('/uploads')) //image exporting to frontend
+
 //6 Define port number
 const PORT = 5000 || process.env.PORT
 

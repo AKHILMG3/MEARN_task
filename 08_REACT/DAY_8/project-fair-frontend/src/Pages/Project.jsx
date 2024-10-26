@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import ProjectCard from '../Components/ProjectCard'
 import { FaSearch } from "react-icons/fa";  
-import { getAllProjectsAPI } from '../Services/ALLAPI.';
+import { getAllProjectsAPI } from '../Services/ALLAPI';
+
 
 function Project() {
+
+  //to told search term from the input box
+
+  const [search,setSearchKey] = useState("")
 
   const [Projects,setProjects] = useState([])
 
@@ -15,7 +20,7 @@ function Project() {
         "Authorization":"Bearer"+ token
       }
       try{
-        const allProjects = await getAllProjectsAPI(reqHeader)
+        const allProjects = await getAllProjectsAPI(searchKey, reqHeader)
         console.log(allProjects.data);
         if(allProjects.status==200){
           setProjects(allProjects.data)
@@ -28,9 +33,9 @@ function Project() {
       }
       catch(error){
         console.log(error);
-        
+       
+    } 
       }
-    }
 
   }
   useEffect(()=>{
@@ -43,7 +48,7 @@ function Project() {
 
         <div className='d-flex justify-content-center'>
         <div className='d-flex w-50'>
-        <input type="text" className='form-control mx-auto ' placeholder='Search By Technology' />
+        <input type="text" onChange={(e)=>setSearchKey({})} className='form-control mx-auto ' placeholder='Search By Technology' />
         <FaSearch className='fs-5 mt-1' style={{marginLeft:'-50px'}} />
         </div>
         </div>
