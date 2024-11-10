@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { userModel } from '../userModel';
+import { UsersService } from 'src/app/services/users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
@@ -8,11 +10,22 @@ import { userModel } from '../userModel';
 })
 export class AddUserComponent {
 
-  user:userModel={} //To hold user Details
+  user: userModel = new userModel(); // Initializing with userModel's structure
 
-  addUsers(){
-    console.log(this.user);
-    
+  constructor(private api: UsersService, private route: Router) {}
+
+  addUser() {
+    this.api.addUserAPI(this.user).subscribe({
+      next:(item:any) => {
+        console.log(item);
+        alert("User added successfully!");
+        this.route.navigateByUrl('/users');
+      },
+      error: (error) => {
+        console.error(error);
+        alert("An error occurred while adding the user.");
+      }
+    });
   }
-
 }
+  

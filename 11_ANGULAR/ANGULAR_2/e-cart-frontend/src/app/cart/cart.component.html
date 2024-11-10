@@ -1,0 +1,82 @@
+<div class="container ">
+    <div class="row p-4">
+        <div class="col-9">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Id</th>
+            <th scope="col">Product</th>
+            <th scope="col">Image</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Action</th>
+            
+
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>43r34</td>
+                <td>shirt</td>
+                <td><img src="" alt=""></td>
+                <td>
+                    <div class="d-flex">
+                        <button class="btn">-</button>
+                        <input type="text" class="form-control" style="max-width: 45px;" value="3" readonly>
+                        <button class="btn">+</button>
+                    </div>
+                </td>
+                <td><button class="btn"><i class="fa-solid fa-trash"></i></button></td>
+                
+
+            </tr>
+        </tbody>
+        
+      </table>
+
+
+</div>
+<div class="col-3 card text-center ">
+    <h1 class=""> Cart Summery</h1>
+    <h2 class="">Total Price</h2>
+    <div>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Checkout
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Payement Form</h1>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="name" id="" class="form-control m-1">
+          <input type="text" name="address" id="" class="form-control m-1 ">
+          <input type="text" name="phone number" id="" class="form-control m-1">
+          <h3 class="m-1 p-2">Total Price :</h3>
+          <div class="text-center">
+            <button class="btn btn-success"> Make Payement</button>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+    
+</div>
+<div class="container text-center">
+  <p>empty cart</p>
+
+</div>

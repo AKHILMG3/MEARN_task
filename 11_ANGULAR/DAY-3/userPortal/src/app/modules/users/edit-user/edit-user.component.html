@@ -1,1 +1,28 @@
-<p>edit-user works!</p>
+<div class="row">
+    <div class=" sidebar col-2 text-center">
+        <p class="fw-bolder fs-6 m-5"><a class="text-decoration-none text-light" routerLink="/dashboard">Home</a></p>
+        <p class="fw-bolder fs-6 m-5"><a class="text-decoration-none text-light" routerLink="users">User</a></p>
+    </div>
+
+    <div class="col-8">
+        <h1 class="m-5">Update User</h1>
+        <form #edituser="ngForm" (ngSubmit)="editUser(user.id)" class="p-5 m-5 shadow ">
+            <input [(ngModel)]="user.id" #id="ngModel" name="user.id" class="form-control mb-3" type="text" placeholder="Id">
+
+            <input [(ngModel)]="user.name" name="user.name"  class="form-control mb-3" type="text" placeholder="Name">
+
+            <input [(ngModel)]="user.email" name="user.name" class="form-control mb-3" type="text" placeholder="Email">
+
+            <label for="status"> Select Status of User</label>
+            <select [(ngModel)]="user.active" #status="ngModel" name="user.active" id="status" class="form-control">
+                <option value="1">Active</option>
+                <option value="0">InActive</option>
+            </select>
+
+            <div class="my-4">
+                <button class="btn btn-primary ">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+

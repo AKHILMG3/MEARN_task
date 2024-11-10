@@ -47,13 +47,19 @@ function BookingPage() {
     terms: false,
   };
 
+  const minServiceDate = () => {
+    const date = new Date();
+    date.setMonth(date.getMonth() + 3);
+    return date.toISOString().split('T')[0];
+  };
+
   const handleSubmit = (values) => {
     console.log('Form Submitted:', values);
     alert('Booking submitted successfully!');
   };
 
   return (
-    <div className='booking ' >
+    <div className='booking'>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -61,43 +67,43 @@ function BookingPage() {
       >
         <Form className="border border-3 border-dark shadow text-light m-2 rounded p-5 w-100">
           <div className='text-dark'>
-            <label>Full Name</label><br />
-            <Field type="text" className="btn-outline-dark mb-3 w-75" name="fullName" placeholder="Enter your name" />
+            <label htmlFor="fullName">Full Name</label><br />
+            <Field type="text" id="fullName" className="btn-outline-dark mb-3 w-75" name="fullName" placeholder="Enter your name" aria-label="Full Name" />
             <ErrorMessage name="fullName" component="div" className="text-danger" />
           </div>
 
-          <div className='text-dark'> 
-            <label>Email</label><br />
-            <Field type="email" className="btn-outline-dark mb-3 w-75" name="email" placeholder="Enter your Email" />
+          <div className='text-dark'>
+            <label htmlFor="email">Email</label><br />
+            <Field type="email" id="email" className="btn-outline-dark mb-3 w-75" name="email" placeholder="Enter your Email" aria-label="Email" />
             <ErrorMessage name="email" component="div" className="text-danger" />
           </div>
 
           <div className='text-dark'>
-            <label>Phone Number</label><br />
-            <Field type="text" className="btn-outline-dark mb-3 w-75" name="phoneNumber" placeholder="Enter your phone no" />
+            <label htmlFor="phoneNumber">Phone Number</label><br />
+            <Field type="text" id="phoneNumber" className="btn-outline-dark mb-3 w-75" name="phoneNumber" placeholder="Enter your phone no" aria-label="Phone Number" />
             <ErrorMessage name="phoneNumber" component="div" className="text-danger" />
           </div>
 
           <div className='text-dark'>
-            <label>Service Date</label><br />
-            <Field type="date" className="btn-outline-dark mb-3 w-75" name="serviceDate" />
+            <label htmlFor="serviceDate">Service Date</label><br />
+            <Field type="date" id="serviceDate" className="btn-outline-dark mb-3 w-75" name="serviceDate" min={minServiceDate()} aria-label="Service Date" />
             <ErrorMessage name="serviceDate" component="div" className="text-danger" />
           </div>
 
-          <div className='text-dark'> 
+          <div className='text-dark'>
             <label>Pet Type</label>
             <div>
-              <Field type="radio" name="petType" value="cat" />
-              <label>Cat</label>
-              <Field type="radio" name="petType" value="dog" />
-              <label>Dog</label>
+              <Field type="radio" id="cat" name="petType" value="cat" aria-label="Cat" />
+              <label htmlFor="cat">Cat</label>
+              <Field type="radio" id="dog" name="petType" value="dog" aria-label="Dog" />
+              <label htmlFor="dog">Dog</label>
             </div>
             <ErrorMessage name="petType" component="div" className="text-danger" />
           </div><br />
 
           <div>
-            <label>Grooming Centre Location</label><br />
-            <Field as="select" className="text-dark btn-outline-dark mb-3 w-75" name="location">
+            <label htmlFor="location">Grooming Centre Location</label><br />
+            <Field as="select" id="location" className="text-dark btn-outline-dark mb-3 w-75" name="location" aria-label="Location">
               <option value="" label="Select a location" />
               <option value="centre1" label="Centre 1" />
               <option value="centre2" label="Centre 2" />
@@ -107,8 +113,8 @@ function BookingPage() {
           </div>
 
           <div>
-            <label>Breed</label><br />
-            <Field as="select" className=" text-dark btn-outline-dark mb-3 w-75" name="breed">
+            <label htmlFor="breed">Breed</label><br />
+            <Field as="select" id="breed" className=" text-dark btn-outline-dark mb-3 w-75" name="breed" aria-label="Breed">
               <option value="" label="Select a breed" />
               <option value="breed1" label="Breed 1" />
               <option value="breed2" label="Breed 2" />
@@ -119,7 +125,7 @@ function BookingPage() {
 
           <div>
             <label>
-              <Field type="checkbox" name="terms" />
+              <Field type="checkbox" name="terms" aria-label="Terms and Conditions" />
               I agree to the terms and conditions
             </label>
             <ErrorMessage name="terms" component="div" className="text-danger" />

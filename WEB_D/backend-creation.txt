@@ -1,0 +1,58 @@
+Backend
+............
+1) npm init -y
+
+2) npm i express dotenv cors mongoose
+ . Express:Create a application in backend
+ . dotenv: Set environment variable 
+ . cors: Communicate two different type of PORT
+
+3) Create .env file(mention .env and node_modules) and .gitignore file  
+
+4) Create index.js file ( import files: require('dotenv').config()
+                                        const express = require("express")
+                                        const cors = require("cors") 
+
+                                        require("./connectiom/db")
+                                       
+                                        //create an app using express
+                                        const projectServer = express()
+                                        projectServer.use(express.json()) //middleware
+                                     
+                                        projectServer.use(cors())
+                                           const PORT = 3000 || process.env.PORT
+
+                                        projectServer.listen(PORT,()=>{
+                                          console.log("Listenind on the Port +PORT")
+                                           }) //run code (nodemon inndex.js)
+
+                                        projectServer.get('/',(req,res)=>{res.send("demo server is started...")})
+
+5).env:DBConnection = copy the connectionstring from mongodb
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Set MongoDB connection
+............................
+1) Create a folder connection => db.js => import mongoose -> const mongoose = require("mongoose") 
+
+                                                             const connectionString = process.env.DBConncetion
+                                                             mongoose.connect(connectionstring).then((res)=>{console.log("Mongodb connection established");})
+                                                             .catch((error)=>{console.log(error); }) 
+
+2) Create a folder Router => router.js -> const express = require("express")  
+
+                                          const router = express.Router()
+
+                                          eg) register,login,view,delete,add to,get from,edit etc...
+
+                                          module.exports = router 
+3) Create a folder models => productSchema.js -> const mongoose = require('mongoose')
+
+                                                const productSchema = new mongoose.schema({
+                                                          define schema
+                                                          eg: id:
+                                                                 { type:Number,
+                                                                   require:true,
+                                                                   unique:true
+                                                                     },
+                                                                      })

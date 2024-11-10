@@ -8,21 +8,23 @@ import { FaOpencart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-
 function Header() {
   const [wishlistCount,setwishlistCount] = useState(0)
+  const[cartCount,setCartCount]=useState(0)
   const wishlist = useSelector(state=>state.wishlistSlice.wishlist)
+  const cart = useSelector(state=>state.cartReducer)
 
   useEffect(()=>{
     setwishlistCount(wishlist?.length)
-  },[wishlist])
+    setCartCount(cart?.length)
+  },[wishlist,cart])
 
 
   return (
     <div className='p-1'>
          <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand className='fs-2' href="#">E-Cart <FaOpencart /> </Navbar.Brand>
+       <Link to={'/'}><Navbar.Brand className='fs-2' href="#">E-Cart <FaOpencart /> </Navbar.Brand></Link> 
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -36,7 +38,7 @@ function Header() {
              </Nav.Link></Link>
         
         <Link to={'./cart'}> <Nav.Link href="#action2" className='ms-auto'>Cart <i class=" text-warning fa-solid fa-cart-plus fa-bounce"></i>
-            <Badge bg='success rounded ms-2'>0</Badge>
+            <Badge bg='success rounded ms-2'>{cartCount}</Badge>
              </Nav.Link></Link>
            
             

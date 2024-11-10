@@ -1,9 +1,24 @@
 {
-    "users":[
-        {
-            "id":"1",
-            "email":"admin@gmail.com",
-            "password":"123"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "anto",
+      "email": "anto@gmail.com",
+      "active": "1"
+    },
+    {
+      "id": "3",
+      "name": "gokul",
+      "email": "gokul@gmail.com",
+      "active": "1"
+    },
+    {
+      "id": "NFuXcaP"
+    }
+  ]
 }

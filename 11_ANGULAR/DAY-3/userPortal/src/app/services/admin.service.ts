@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { userModel } from '../userModel'
 
 
 @Injectable({
@@ -12,9 +11,11 @@ export class AdminService {
 
   constructor(private http:HttpClient) {}
 
-  addUserAPI(user:userModel){
-    return this.http.post( `${this.baseURL}/users`,user)
+  authentication(){
+    return this.http.get(`${this.baseURL}/users`)
   }
+
+ 
 
   
 }

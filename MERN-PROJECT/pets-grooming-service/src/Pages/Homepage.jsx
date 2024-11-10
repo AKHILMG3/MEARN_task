@@ -30,7 +30,7 @@ function Homepage() {
       <h1 className='fs-1 fw-bold text-center'>Explore Our Pet Grooming Services for Your Pet</h1><br />
       
       <div>
-        <div className="row justify-content-evenly  p-2 m-2">
+        <div className="row justify-content-evenly  ">
           <div className="col-4 border border-2  w-25" style={{borderRadius:'10px'}}><img src="https://ohmypetgrooming.in/wp-content/uploads/2024/05/vecteezy_cartoon-funny-little-dog-playing-ball_-1024x1002.webp" alt="" /><p className='text-center fw-bold'>Dog Training At Home </p></div>
 
           <div className="col-4 border border-2  w-25" style={{borderRadius:'10px'}}><img src="https://ohmypetgrooming.in/wp-content/uploads/2024/05/vecteezy_veterinarian-with-a-dog-veterinarian-by-profession_-1024x985.webp" alt="" /><p className='text-center fw-bold'>Online Vet Consultation</p></div>
@@ -50,11 +50,9 @@ function Homepage() {
         </div>
       
     </div>
-     
-   
-     
+     <br /><br />
     </div>
   )
-}
+}vc
 
 export default Homepage

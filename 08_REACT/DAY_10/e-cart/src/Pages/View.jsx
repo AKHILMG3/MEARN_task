@@ -1,64 +1,59 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
-import { useSelector } from 'react-redux';
-import { Link, useParams } from 'react-router-dom'
-import Spinner from 'react-bootstrap/Spinner';
+import { Button, Spinner,} from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'
+import { addToWishlist } from '../redux/slice/wishlistlice';
 import { addToCart } from '../redux/slice/cartSlice';
-
 
 
 function View() {
 
   const {id} = useParams()
-  console.log(id);
-  const {loading}= useSelector((state)=>state.productSlice)
   const[product,setProduct] = useState({})
+  const products = JSON.parse(localStorage.getItem("products"))
+  const dispatch=useDispatch()
+
+  const { wishlist } = useSelector(state=>state.wishlistSlice)
+  const { loading } = useSelector((state)=>state.prouctSlice)
+ 
 
   useEffect(()=>{
-    const products= JSON.parse(localStorage.getItem("products"))
-    setProduct(products.find(product=>product.id==id))
+   setProduct(products.find(item => item.id==id))
   },[])
 
-  console.log(product);
-  
-  
+  const handleWishlist = (product)=>{
+    const existingProduct = wishlist.find(item=>item.id==product.id)
+  if(existingProduct){
+    alert("already exist")
+  }
+  else{
+    dispatch(addToWishlist(product))
+  }
+  }
+
   return (
-    <div >
-    {
-       loading?
-       <div className='d-flex justify-content-center mt-5'>
-         <Spinner animation="border" variant="info" />Loading...
-       </div>:
-
-      <Row className='mt-5 container'>
-        <Col className=' col-6 p-5 m-2'>
-        <Card className='m-2' style={{ width:'450px', height:'350px'}}>
-             <Card.Img className='w-100 p-2 ' variant="top,bottom" src={product?.thumbnail} />
-
-          <div className='d-flex justify-content-between p-2'>
-
-        <Button ><i class="text-danger fa-solid fa-heart"></i></Button>
-        <Button><i class="text-warning fa-solid fa-cart-shopping"></i></Button>
-        </div>
-        </Card>
-        </Col>
-        <Col className='p-5 ms-5 m-3'>
-        <div>
-          <p>Pid{product.id}</p>
-          
-          <h1>{product?.title}</h1>
-          <div className='d-flex justify-content-sm-start '> Price : <span className='text-decoration-line-through'> $4999.00 </span> <span>{product?.price}</span></div><br /><br />
-         <p>{product?.description}</p>
-          <br /><br />
-
-          <div className='d-flex justify-content-between'> 
-            <Button className='btn btn-outline-warning'>Wishlist <i class="text-danger fa-solid fa-heart"></i></Button>
-            <Link to={''}><Button className='btn btn-outline-warning' onClick={()=>dispatch(addToCart(product))}> <i class=" text-light fa-solid fa-cart-shopping"></i> Add to Cart</Button></Link> 
-          </div>
-        </div>
-        </Col>
-      </Row>
-}
+    <div className='container my-3'>
+   {
+    loading? <div className='d-flex justify-content-center mt-5'>
+    <Spinner animation="border" variant="info" />Loading...
+  </div>
+  :
+    <div className="row d-flex justify-content-center flex-wrap">
+    <div className="col-6 border " style={{minWidth:'400px'}}>
+      <img src={product?.thumbnail} alt="" width={'100%'} />
+    </div>
+    <div className="col-6 my-3 border px-5" style={{minWidth:'400px'}}>
+      <p>Product:Id:{product?.id}</p>
+      <h1>{product?.title}</h1>
+      <p className='fs-5'>{product?.description}</p>
+      <h4>Price:${product?.price}</h4>
+      
+      <div className='button mt-5 d-flex justify-content-between'>
+        <Button variant='danger fs-6 rounded' onClick={()=>handleWishlist(product)}><i class="text-danger fa-solid fa-heart">&nbsp;&nbsp; W i s h l i s t </i></Button>
+        <Button variant='info fd-6 rounded' onClick={() => dispatch(addToCart(product))}><i class="text-warning fa-solid fa-cart-shopping">&nbsp;&nbsp; C a r t </i></Button>
+      </div>
+    </div>
+   </div>}
     </div>
   )
 }

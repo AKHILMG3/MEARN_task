@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { emptyCart, removeFromCart } from '../redux/slice/cartSlice'
+import { Link } from 'react-router-dom'
 
 function Cart() {
   const cart = useSelector(state=>state.cartReducer)
-
   const [total,setTotal] = useState(0)
+  const dispatch= useDispatch()
 
   useEffect(()=>{
-    if(cart){
+    if(cart?.length>0){
       setTotal(cart?.map(product=>product?.totalPrice).reduce((p1,p2)=>p1+p2))
     }
     else{
@@ -41,29 +43,34 @@ function Cart() {
               <td><img style={{width:"300px",height:"300px"}} src={product.thumbnail} alt="" /></td>
               <td><input type="text" value={product.quantity} readOnly style={{width:"25px"}} /></td>
               <td>${product.totalPrice}</td>
-              <td><button><i class="fa-solid fa-trash text-danger"></i></button></td>
+              <td><button className='btn' onClick={()=>dispatch(removeFromCart(product.id))}><i class="fa-solid fa-trash text-danger"></i></button></td>
             </tr>))
             }
           </tbody>
         </table>
 
-        <div>
-          <button>Empty Cart</button>
-          <button>Shop More</button>
+        <div className='float-end'>
+          <button className='btn btn-outline-warning' onClick={()=>dispatch(emptyCart())}>Empty Cart</button>
+         <Link to={'/'} style={{textDecoration:"none"}}><button className='btn btn-outline-primary'>Shop More</button></Link> 
         </div>
       </div>
      </div>
-:0}
+:0 }
   <div className='col-lg-3 '>
       <div className='container border border rounded shadow mt5 p-3 w-100'>
         
         <h1>Cart Summary</h1>
-        <h4>Total Products</h4>
-        <h5>Total: <span className='text-danger fw-bolder'>$1892</span></h5>
+        <h4>Total Products:{cart?.length}</h4>
+        <h5>Total: <span className='text-danger fw-bolder'>${total}</span></h5>
         <button className='btn btn-success m-3 rounded'>Checkout</button>
       </div>
      </div>
-     <div></div>
+     <div>:
+     <div className='container mt-5 d-flex '>
+         <h3 className='text-center'>Your Wishlist Is Empty...</h3>
+         </div>
+      
+     </div>
 
     </div>
   )

@@ -9,8 +9,9 @@ import { createSlice } from "@reduxjs/toolkit";
         addToCart:(state,action)=>{
             const existingProduct = state.find(item=>item.id==action.payload.id)
             if(existingProduct){
-                const newState = state.filter(item=>item.id==action.payload.id)
+                const newState = state.filter(item=>item.id!==existingProduct.id)
                 existingProduct.quantity++
+                existingProduct.totalPrice=existingProduct.quantity*existingProduct.price
                 state= ([...newState,existingProduct])
             }
             else{
@@ -21,7 +22,7 @@ import { createSlice } from "@reduxjs/toolkit";
             return state.filter(item=>item.id!==action.payload)
         },
         emptyCart:(state)=>{
-            return state =[]
+            return state = []
         }
     }
  }) 

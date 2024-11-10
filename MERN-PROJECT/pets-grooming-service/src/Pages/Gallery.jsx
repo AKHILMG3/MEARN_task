@@ -26,12 +26,18 @@ const GalleryPage = () => {
   };
 
   const addImage = () => {
+    if (!newImage.before || !newImage.after || !newImage.description) {
+      alert('Please fill out all fields with valid information.');
+      return;
+    }
+
     setGalleryImages([...galleryImages, newImage]);
-    setNewImage({ before: '', after: '', description: '' }); // Clear input fields
+    setNewImage({ before: '', after: '', description: '' });
+    alert('Image added to gallery!');
   };
 
   return (
-    <div className="gallery-page">
+    <div className="gallery-page border border-3 p-4">
       <h2>Pet Grooming Gallery</h2>
       <p>Check out the amazing transformations!</p>
       <div className="gallery-grid">
@@ -51,8 +57,8 @@ const GalleryPage = () => {
           </div>
         ))}
       </div>
-      
-      <div className="add-image-form">
+
+      <div className="add-image-form mt-4">
         <h3>Add New Transformation</h3>
         <input
           type="text"
@@ -61,6 +67,7 @@ const GalleryPage = () => {
           value={newImage.before}
           onChange={handleInputChange}
           className="input-field"
+          aria-label="Before Image URL"
         />
         <input
           type="text"
@@ -69,6 +76,7 @@ const GalleryPage = () => {
           value={newImage.after}
           onChange={handleInputChange}
           className="input-field"
+          aria-label="After Image URL"
         />
         <input
           type="text"
@@ -77,11 +85,12 @@ const GalleryPage = () => {
           value={newImage.description}
           onChange={handleInputChange}
           className="input-field"
+          aria-label="Description"
         />
-        <button onClick={addImage} className="add-button">Add to Gallery</button>
+        <button onClick={addImage} className="add-button mt-2">Add to Gallery</button>
       </div>
     </div>
   );
-}
+};
 
 export default GalleryPage;

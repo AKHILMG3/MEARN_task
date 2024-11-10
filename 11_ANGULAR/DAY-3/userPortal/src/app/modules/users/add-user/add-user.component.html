@@ -6,7 +6,7 @@
 
     <div class="col-8">
         <h1 class="m-5">Add User</h1>
-        <form (ngSubmit)="addUsers()" class="p-5 m-5 shadow ">
+        <form (ngSubmit)="addUser()" class="p-5 m-5 shadow ">
             <input [(ngModel)]="user.id" name="user.id" class="form-control mb-3" type="text" placeholder="Id">
 
             <input [(ngModel)]="user.name" name="user.name"  class="form-control mb-3" type="text" placeholder="Name">
@@ -14,13 +14,13 @@
             <input [(ngModel)]="user.email" name="user.name" class="form-control mb-3" type="text" placeholder="Email">
 
             <label for="status"> Select Status of User</label>
-            <select [(ngModel)]="user.active" #status="ngModel" name="user active" id="status">
+            <select [(ngModel)]="user.active" #status="ngModel" name="user.active" id="status" class="form-control">
                 <option value="1">Active</option>
                 <option value="0">InActive</option>
             </select>
 
             <div class="my-4">
-                <button>Submit</button>
+                <button class="btn btn-primary ">Submit</button>
             </div>
         </form>
     </div>
