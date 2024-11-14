@@ -3,7 +3,7 @@ const products = require('../models/productSchema')
 //get all products
 exports.getProducts = async(req,res)=>{
     try{
-        const allProducts = await products.findOne()
+        const allProducts = await products.find()
             res.status(200).json(allProducts)
         
     }

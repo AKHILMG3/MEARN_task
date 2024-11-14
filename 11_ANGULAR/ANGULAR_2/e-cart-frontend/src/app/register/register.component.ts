@@ -11,20 +11,20 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   constructor(private fb:FormBuilder,private api:ApiService,private route:Router){}
 
-  registerFrom = this.fb.group({
+  registerForm = this.fb.group({
     username:[""],
     email:[''],
       password:['']
   })
 
   register(){
-    if(!this.registerFrom.valid){
+    if(!this.registerForm.valid){
       alert("please fill the form")
     }
     else{
-      let username = this.registerFrom.value.username;
-      let email = this.registerFrom.value.email;
-      let password = this.registerFrom.value.username;
+      let username = this.registerForm.value.username;
+      let email = this.registerForm.value.email;
+      let password = this.registerForm.value.password;
       const user = {username,email,password}
 
       //api call 

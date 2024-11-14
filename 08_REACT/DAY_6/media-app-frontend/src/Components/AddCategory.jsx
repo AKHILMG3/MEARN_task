@@ -20,7 +20,8 @@ function AddCategory() {
 
   const handleAdd = async()=>{
     const body={
-      categoryName
+      categoryName,
+      allVideos:[]
     }
     
     if(categoryName){
@@ -28,10 +29,11 @@ function AddCategory() {
         const response = await addcategoryAPI(body)
     console.log(response);
     console.log(category);
+    
     alert("Added category" + categoryName)
     handleGetCategory()
     setCategoryName("")
-    handleShow()
+    handleClose()
       }
       catch(error){
         console.log(error);
@@ -52,21 +54,19 @@ function AddCategory() {
   const handleDelete = async(id)=>{
     const response = await deleteCategoryAPI(id)
     console.log(response);
-    setDeleteStatus(response.data)
+    setDeleteStatus(response)
     
   }
 
   const videoDrop=async(e,categoryId)=>{
-    console.log("idd");
-    
     console.log("Video drop"+categoryId,e);
     const videoId = e.dataTransfer.getData("videoId")
     console.log("VideoId: "+videoId);
     e.preventDefault();
 
     // get particular video
-    const response = await getAVideoAPI(videoId)
-    console.log(response);
+    const data = await getAVideoAPI(videoId)
+    console.log(data);
 
     //get category details
     const selectedCategory = getCategory?.find(item=>item.id===categoryId)

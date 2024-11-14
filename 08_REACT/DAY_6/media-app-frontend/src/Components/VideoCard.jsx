@@ -10,7 +10,7 @@ import { Await } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
 
-function VideoCard({displayVideo}) {
+function VideoCard({displayVideo, setDeleteVideostatus}) {
   console.log(displayVideo);
   
   const [show, setShow] = useState(false);
@@ -18,7 +18,7 @@ function VideoCard({displayVideo}) {
   const handleClose = () => setShow(false);
   const handleShow  = async() => { setShow(true);
 
-  const {caption,url}= displayVideo
+  const {caption,embedLink}= displayVideo
   let today = new Date()
   console.log(today);
   let timestamp = new Intl.DateTimeFormat('en-us',{year:'numeric',
@@ -28,7 +28,7 @@ function VideoCard({displayVideo}) {
 
   let videoDetails ={
     caption,
-    url,
+    embedLink,
     timestamp
   }
   
@@ -80,7 +80,7 @@ function VideoCard({displayVideo}) {
 
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className='bg-dark'>
-          <Modal.Title>Add Category</Modal.Title>
+          <Modal.Title>{displayVideo.caption}</Modal.Title>
         </Modal.Header>
         <Modal.Body className='bg-dark  '> <iframe width="460" height="315" src={displayVideo.embedLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <input type="text" placeholder='Category name' className='form-control' /></Modal.Body>
         <Modal.Footer className='bg-dark' >

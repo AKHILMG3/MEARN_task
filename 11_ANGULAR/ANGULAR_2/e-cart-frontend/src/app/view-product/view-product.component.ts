@@ -14,22 +14,44 @@ export class ViewProductComponent implements OnInit {
   product:any={}
   
   ngOnInit(): void {
-    this.viewProducts()
+    this.viewProduct()
  
   }
-  viewProducts(){
+  viewProduct(){
     //get id from [param]
     this.route.params.subscribe((res:any)=>{
       console.log(res);
       const {id}=res
       console.log(id);
-      this.api.viewproductAPI(id).subscribe((res:any)=>{
+      this.api.viewProductAPI(id).subscribe((res:any)=>{
         console.log(res);
+        this.product=res
         
       })
       
     })
      
+  }
+
+  addToWishlist(product:any){
+    // const {id,title,price,image} = this.product
+    if(sessionStorage.getItem("token")){
+      this.api.addToWishlist(product).subscribe({
+        next:(res:any)=>{
+          console.log(res);
+          alert(res)
+        },
+        error:(err:any)=>{
+          alert(err.error)
+          console.log(err);
+          
+        }
+      })
+    }
+    else{
+      alert("please login")
+    }
+    
   }
 
 }

@@ -9,13 +9,13 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Header() {
-  const [wishlistCount,setwishlistCount] = useState(0)
+  const [wishlistCount,setWishlistCount] = useState(0)
   const[cartCount,setCartCount]=useState(0)
   const wishlist = useSelector(state=>state.wishlistSlice.wishlist)
   const cart = useSelector(state=>state.cartReducer)
 
   useEffect(()=>{
-    setwishlistCount(wishlist?.length)
+    setWishlistCount(wishlist?.length)
     setCartCount(cart?.length)
   },[wishlist,cart])
 

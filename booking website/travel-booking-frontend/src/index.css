@@ -1,0 +1,30 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.header{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+}
+.menu{
+  margin-bottom: 0px;
+}
+.nav_item a {
+  text-decoration: none;
+  color:black;
+  font: weight 500px;
+  font-size: 1.1rem;
+}
+
+.nav_item a:hover{
+  color:inherit;
+}
+.nav_item a.active_link{
+  color: var(--heading-color);
+}
+.mobile_menu{
+  font-size: 1.3rem;
+  color: var(--heading-color);
+  display: none;
+}

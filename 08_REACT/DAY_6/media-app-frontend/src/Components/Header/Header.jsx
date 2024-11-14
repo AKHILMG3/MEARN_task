@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { GiMusicalNotes } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -10,7 +11,8 @@ function Header() {
       <Navbar.Brand href="#home" className='text-light fs-1'>
       <GiMusicalNotes className='me-3 fs-1 text-warning'/>
 
-        <div className='text-warning'>Media Player</div>
+<Link to={'/'}><div className='text-warning'>Media Player</div></Link>
+        
       </Navbar.Brand>
     </Container>
   </Navbar></div>
