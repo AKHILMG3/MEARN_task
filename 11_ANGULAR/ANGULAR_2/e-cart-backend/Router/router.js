@@ -28,5 +28,9 @@ router.post('/cart',jwtMiddleware,cartController.addToCart)
 router.get('/cart',jwtMiddleware,cartController.getCart)
 //delete cart
 router.delete('/cart/:id', jwtMiddleware,cartController.deleteCart)
+//increment 
+router.get('/cart/:id',jwtMiddleware,cartController.incrementCart)
+//decrement 
+router.get('/cart/:id',jwtMiddleware,cartController.decrementCart)
 
 module.exports=router

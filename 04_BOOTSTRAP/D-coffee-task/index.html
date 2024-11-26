@@ -3,309 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee</title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-<!-- boostarp -->
+    <title>Coffee Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- font aswsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #6f4e37;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .hero {
+            background: url('https://cdn.pixabay.com/photo/2018/05/12/00/32/coffee-3392168_960_720.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .hero h1 {
+            font-size: 4rem;
+        }
+        .coffee-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .footer {
+            background-color: #6f4e37;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
-
-<body class="body">
-  
-
-  <center>
-
- 
-    <div class="head">
-
-      <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-    
-      <div class="container-fluid ">
-       
-       
-        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Products</a>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link" href="#"></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Special coffee
-                
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#cap">Cappuccino</a></li>
-                <li><a class="dropdown-item" href="#esp">Espresso</a></li>
-                <li><a class="dropdown-item" href="#cold">Cold Brew</a></li>
-                <li><a class="dropdown-item" href="#mac">Macchiatos</a></li>
-                <li><a class="dropdown-item" href="#bla">Americano</a></li>
-                <li><a class="dropdown-item" href="#bla">Black Coffee</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-           
-            <div class="d-flex text-center">
-              <h1 class="m-2"><img src="https://www.icegif.com/wp-content/uploads/2023/06/icegif-1076.gif" class="" width="80px" alt=""> <span>C</span><span>O</span>FF<span>E</span><span>E</span> <span>C</span><span>U</span><span>l</span>T<span>U</span><span>R</span><span>E</span></h1>
-                    </ul></div>
-          
-          <form class="d-flex" role="search">
-            
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <h2 class="fw-bold"> <i class="fa-solid fa-mug-hot"></i> Coffee Bliss </h2> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Our Coffees</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-      </div>
-  </center>
 
-  <div >
-    <h1 class="text-decoration-underline p-2 m-3">Enjoy the Best Coffees</h1>
-    <div class="col-10 d-flex justify-content-evenly p-5 m-3 textAlign:'justify'"><h3>About: </h3>Coffee is a beverage brewed from roasted coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content. It has the highest sales in the world market for hot drinks.
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="fw-bold">Welcome to Coffee Bliss</h1>
+    </section>
+    <hr>
 
-      The seeds of the Coffea plant's fruits are separated to produce unroasted green coffee beans. The beans are roasted and then ground into fine particles typically steeped in hot water before being filtered out, producing a cup of coffee. It is usually served hot, although chilled or iced coffee is common. Coffee can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). Sugar, sugar substitutes, milk, and cream are often added to mask the bitter taste or enhance the flavor.
-    <div class="col-4 m-3 p-2"><iframe width="560" height="315" src="https://www.youtube.com/embed/aTC_RNYtEb0?si=8vbWq7otWPjDDJc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-  </div>
-  </div><hr><br>  
-  <img src="https://static.vecteezy.com/system/resources/previews/023/010/450/non_2x/the-cup-of-latte-coffee-with-heart-shaped-latte-art-and-ai-generated-free-photo.jpg" width="100%" alt=""><br><hr><br>
-
-
-  
-
-  <section id="sec">
-    <center>
-      <h2>Types of COFFEE</h2>
-    </center>
-    <div class="typ">
-      <div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/1200px-Cappuccino_at_Sightglass_Coffee.jpg" width="500px" alt="">
-    </div>
-      <div>
-        <h3 id="cap">Cappuccino</h3>
-        <p>A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elements into equal thirds. An expertly made cappuccino should be rich, but not acidic and have a mildly sweet flavouring from the milk.</p>
-      </div>
-
-    </div>
-  </section>
-  
-  <section id="sec">
-
-    <div class="typ">
-      
-      <div>
-        <h3 id="esp">Espresso</h3>
-        <p>
-          A strong concentrated coffee drink typically served in a small espresso cup. It is commonly used as a base for many coffee drinks such as lattes, cappuccinos, and macchiatos.
-          </p>
-      </div>
-     <div>
-      <img src="https://www.kitchenaid.com/is/image/content/dam/business-unit/kitchenaid/en-us/marketing-content/site-assets/page-content/blog/difference-between-espresso-and-coffee/espresso-vs-coffee-img0.jpg?fmt=png-alpha&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0&scl=1&constrain=fit,1" width="500px" alt="">
-     </div>
-
-    </div>
-  </section>
-
-  <section id="sec">
-
-    <div class="typ">
-      <div>
-        <img src="https://www.cnet.com/a/img/resize/4d819655f4dd7cef8cc015904851a744acab7b8a/hub/2016/07/27/92d5f84b-1333-4637-8904-8bcad270eb8a/cold-brew-promo-shot.jpg?auto=webp&fit=crop&height=675&width=1200" width="500px" alt="">
-       </div>
-      
-      <div>
-        <h3 id="cold">Cold Brew</h3>
-        <p>
-          A cold coffee drink made by steeping ground coffee in cold water for 12 to 24 hours. The coffee is then filtered, and coffee grounds are removed, resulting in coffee that is less bitter and acidic than hot coffee.
-
-          </p>
-      </div>
-     
-
-    </div>
-  </section>
-
-  <section id="sec">
-
-    <div class="typ">
-
-      <div>
-        <h3 id="mac">Macchiatos</h3>
-        <p>
-          A coffee drink made with espresso and a small amount of steamed milk or foam on top. Macchiato is known for its strong and bold taste and can be served hot or over ice.
-
-          </p>
-      </div>
-      <div>
-        <img src="https://images.ctfassets.net/v601h1fyjgba/6cbjpHEL7rgkICqBJ7870c/287cdae30aeea24586efe350ebe3cadd/Macchiato_COMP.jpg" width="500px" alt="">
-       </div>
-      
-      
-     
-
-    </div>
-  </section>
-
-  <section id="sec">
-
-    <div class="typ">
-
-      <div>
-        <img src="https://assets.beanbox.com/blog_images/AB7ud4YSE6nmOX0iGlgA.jpeg" width="500px" alt="">
-       </div>
-      
-      <div>
-        <h3 id="ame">Americano</h3>
-        <p>
-          A coffee drink typically made from equal parts espresso and hot water and is enjoyed black or with a small amount of cream. Americanos typically have strong flavor with less bitterness.
-
-        </p>
-      </div>
-
-
-    </div>
-  </section>
-
-  <section id="sec">
-
-    <div class="typ">
-
-      <div>
-        <h3 id="bla">Black Coffee</h3>
-        <p>
-          Black coffee is a hot coffee beverage simply made by brewing ground coffee. Traditionally, no sugar or milk is added. This coffee drink can be made using a variety of coffee beans for different flavors and aromas.
-
-
-        </p>
-      </div>
-
-
-      <div>
-        <img src="https://images.moneycontrol.com/static-mcnews/2023/09/Health-benefits-of-black-coffee-for-weight-loss-770x433.jpg?impolicy=website&width=770&height=431" width="500px" alt="">
-       </div>
-
-    </div>
-
-  </section><br><hr>
-
-  <video src="./video/46989-449623829_small.mp4" muted loop autoplay width="100%"></video>
-
-  <br><hr><br>
-
-
-  
-    <footer class="bg-body-tertiary text-center text-lg-start">
-      
-      <div class="container p-4 pb-0">
-        <form action="">
-         
-          <div class="row">
-           
-            <div class="col-auto mb-4 mb-md-0">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-    
-            <div class="col-md-5 col-12 mb-4 mb-md-0">
-              <div data-mdb-input-init class="form-outline mb-4">
-                <input type="email" id="form5Example22" class="form-control" />
-                <label class="form-label" for="form5Example22">Email address</label>
-              </div>
-            </div>
-    
-            <div class="col-auto mb-4 mb-md-0">
-              <button data-mdb-ripple-init type="button" class="btn btn-primary mb-4">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    
-      <footer class="bg-body-tertiary text-center">
-        <div class="container p-4 pb-0">
-          <section class="mb-4">
-            <a
-            data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #3b5998;"
-              href="https://www.facebook.com/login/"
-              role="button"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-      
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #55acee;"
-              href="https://x.com/login"
-              role="button"
-              ><i class="fab fa-twitter"></i
-            ></a>
-      
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #dd4b39;"
-              href="https://www.google.co.in/"
-              role="button"
-              ><i class="fab fa-google"></i
-            ></a>
-      
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="https://www.instagram.com/accounts/login/?hl=en"
-              role="button"
-              ><i class="fab fa-instagram"></i
-            ></a>
-      
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="https://www.linkedin.com/feed/"
-              role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #333333;"
-              href="https://github.com/"
-              role="button"
-              ><i class="fab fa-github"></i
-            ></a>
-          </section>
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h2>About Us</h2>
+            <p class="lead mt-3">
+                At Coffee Bliss, we bring you the finest coffee crafted with passion and precision. Whether you're a fan of a rich espresso or a refreshing cold brew, we have something for every coffee lover.
+            </p>
         </div>
-      
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2024 Copyright:
-          <a class="text-body" href="https://mdbootstrap.com/">Coffee.com</a>
+    </section>
+
+    <hr>
+    <!-- Coffees Section -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Our Coffees</h2>
+            <div class="row g-4 mt-4">
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/04/31/caffeine-1867326_1280.jpg" alt="Cappuccino">
+                    <h5 class="mt-2">Cappuccino</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2019/01/13/11/54/espresso-3930170_1280.jpg" alt="Espresso">
+                    <h5 class="mt-2">Espresso</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg" alt="Cold Brew">
+                    <h5 class="mt-2">Cold Brew</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/02/28/23/57/batten-1227812_960_720.jpg" alt="Macchiato">
+                    <h5 class="mt-2">Macchiatos</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="Americano">
+                    <h5 class="mt-2">Americano</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2014/12/11/02/56/coffee-563797_1280.jpg" alt="Black Coffee">
+                    <h5 class="mt-2">Black Coffee</h5>
+                </div>
+            </div>
         </div>
-    
+    </section>
+    <hr>
+
+    <!-- Video Section -->
+    <section id="video" class="py-5 text-center">
+        <div class="container">
+            <h2>Experience Coffee Bliss</h2>
+            <video src="https://cdn.pixabay.com/video/2020/08/12/46989-449623829_large.mp4" width="800" autoplay muted loop></video>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
-
-    
-     

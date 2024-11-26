@@ -1,0 +1,356 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.wrapper{
+  background-image: url('https://img.freepik.com/premium-photo/cat-dog-lying-couch_433905-11536.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.navbar{
+  height: 80px;
+  width: 100%;
+  background-color: rgba(20, 19, 19, 0.29);
+}
+.navbar h1{
+  font-family: "Bungee Tint", sans-serif;
+
+}
+.logo{
+  width: 140px;
+  height: auto;
+  padding: 0px 30px;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.navbar ul{
+  float: right;
+  margin-right: 20px;
+}
+.navbar ul li{
+  list-style: none;
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 80px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 6px 13px;
+}
+.navbar ul li a:hover{
+  background-color: orange;
+  border-radius: 5px;
+}
+.wrapper .center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  user-select: none;  
+}
+.center h1{
+  color: white;
+  font-size: 70px;
+  font-size: 53px;
+  font-weight: bold;
+  width: 900px;
+  text-align:center;
+}
+.center h2{
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  width: 880px;
+  margin-top: 10px;
+  text-align:center;
+}
+.center .buttons{
+  margin: 35px 280px;
+}
+.buttons button{
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffb3b3;
+  background-color: red;
+  border-radius: 25px;
+  border: 1px solid #cc0000;
+  outline: none;
+  cursor: pointer;
+}
+.btn{
+  margin: 10px ;
+}
+.buttons button:hover{
+  background-color: #cc0000;
+} 
+
+.col-6{
+  justify-content: space-between;
+}
+input{
+  border-radius: 20px;
+}
+select{
+  border-radius: 20px;
+}
+
+.about{
+  width: 100%;
+}
+.about img{
+  width: 100%;
+  height: 600px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-field, .radio-field, .checkbox-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.booking{
+
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 600px;
+}
+
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+
+
+.gallery-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery-page h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.gallery-page p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.gallery-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.gallery-item h4 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image {
+  text-align: center;
+  width: 48%;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
+}
+
+.image p {
+  margin-top: 5px;
+  color: #666;
+  font-weight: bold;
+}
+
+.add-image-form {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.add-image-form h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+
+
+.location-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.location-page h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.location-page p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.location-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.location-item h3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.book-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #218838;
+}
+
+.login-container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 600px;
+
+}
+
+
+
+

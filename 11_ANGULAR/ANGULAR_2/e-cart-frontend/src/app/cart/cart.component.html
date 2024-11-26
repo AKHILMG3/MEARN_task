@@ -7,6 +7,7 @@
             <th scope="col">#</th>
             <th scope="col">Id</th>
             <th scope="col">Product</th>
+            <th scope="col">Price</th>
             <th scope="col">Image</th>
             <th scope="col">Quantity</th>
             <th scope="col">Action</th>
@@ -15,19 +16,20 @@
           </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>43r34</td>
-                <td>shirt</td>
-                <td><img src="" alt=""></td>
+            <tr *ngFor="let cart of cartItem; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{cart.id}}</td>
+                <td>{{cart.title}}</td>
+                <td>{{cart.price}}</td>
+                <td><img [src]="cart.image" width="100px" alt=""></td>
                 <td>
                     <div class="d-flex">
                         <button class="btn">-</button>
-                        <input type="text" class="form-control" style="max-width: 45px;" value="3" readonly>
+                        <input type="text" class="form-control" style="max-width: 45px;" [value]="cart.quantity " readonly>
                         <button class="btn">+</button>
                     </div>
                 </td>
-                <td><button class="btn"><i class="fa-solid fa-trash"></i></button></td>
+                <td><button (click)="deleteCart(cart.id)" class="btn"><i class="fa-solid fa-trash"></i></button></td>
                 
 
             </tr>

@@ -36,7 +36,7 @@ export class ViewProductComponent implements OnInit {
   addToWishlist(product:any){
     // const {id,title,price,image} = this.product
     if(sessionStorage.getItem("token")){
-      this.api.addToWishlist(product).subscribe({
+      this.api.addToWishlistAPI(product).subscribe({
         next:(res:any)=>{
           console.log(res);
           alert(res)
@@ -52,6 +52,27 @@ export class ViewProductComponent implements OnInit {
       alert("please login")
     }
     
+  }
+
+  addToCart(product:any){
+    if(sessionStorage.getItem("token")){
+      product.quantity=1
+      this.api.addToCartAPI(product).subscribe({
+        next:(res:any)=>{
+          console.log(res);
+          alert(res)
+        },
+        error:(err:any)=>{
+          alert(err.error)
+          console.log(err);
+          
+        }
+      })
+    }
+    else{
+      alert("please login")
+    }
+
   }
 
 }

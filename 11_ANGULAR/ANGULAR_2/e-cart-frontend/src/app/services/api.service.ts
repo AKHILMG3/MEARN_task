@@ -36,14 +36,32 @@ export class ApiService {
     return {headers}
   }
 
-  addToWishlist(body:any){
-    return this.http.post(`${this.baseURL}/wishlist`,body.appendToken)
+  addToWishlistAPI(body:any){
+    return this.http.post(`${this.baseURL}/wishlist`,body.appendToken())
   }
 
   getWishlistAPI(){
-    return this.http.get(`${this.baseURL}/wishlist`)
+    return this.http.get(`${this.baseURL}/wishlist`,this.appendToken())
   }
   deleteWishlistProductAPI(id:any){
-    return this.http.delete(`${this.baseURL}/wishlist/${id}`)
+    return this.http.delete(`${this.baseURL}/wishlist/${id}`,this.appendToken())
   }
-}
+  addToCartAPI(body:any){
+    return this.http.post(`${this.baseURL}/cart`,body,this.appendToken())
+  }
+  getCartAPI(){
+    return this.http.get(`${this.baseURL}/cart`,this.appendToken())
+  }
+  deleteCartProductAPI(id:any){
+    return this.http.delete(`${this.baseURL}/cart/${id}`,this.appendToken())
+  }
+  incrementCartProductAPI(id:any){
+    return this.http.get(`${this.baseURL}/cart/${id}`,this.appendToken())
+  }
+  decrementCartProductAPI(id:any){
+    return this.http.get(`${this.baseURL}/cartDecrement/${id}`,this.appendToken())
+  }
+  
+  }
+
+
