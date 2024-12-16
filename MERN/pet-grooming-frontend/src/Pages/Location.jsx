@@ -1,38 +1,67 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const locations = [
-  { name: 'Kochi', address: 'Kochi, Kerala' },
-  { name: 'Trivandrum', address: 'Trivandrum, Kerala' },
-  { name: 'Bangalore', address: 'Bangalore, Karnataka' },
-  { name: 'Chennai', address: 'Chennai, Tamil Nadu' },
-];
+function Locations() {
+    const locations = [
+        {
+            name: "Kochi",
+            image: "https://via.placeholder.com/200x150?text=Kochi",
+        },
+        {
+            name: "Trivandrum",
+            image: "https://via.placeholder.com/200x150?text=Trivandrum",
+        },
+        {
+            name: "Kollam",
+            image: "https://via.placeholder.com/200x150?text=Kollam",
+        },
+        {
+            name: "Kozhikode",
+            image: "https://via.placeholder.com/200x150?text=Kozhikode",
+        },
+        {
+            name: "Thrissur",
+            image: "https://via.placeholder.com/200x150?text=Thrissur",
+        },
+        {
+            name: "Kottayam",
+            image: "https://via.placeholder.com/200x150?text=Kottayam",
+        },
+        {
+            name: "Kannur",
+            image: "https://via.placeholder.com/200x150?text=Kannur",
+        },
+        {
+            name: "Idukki",
+            image: "https://via.placeholder.com/200x150?text=Idukki",
+        },
+    ];
 
-function Location() {
-
-  const handleBooking = (location) => {
-    alert(`Booking service at ${location}!`);
-    // Redirect to booking page or handle the booking logic here
-  };
-
-  return (
-    <div>
-      <div className="location-page border border-2 p-5 m-5 w-50">
-      <h2>Pet Grooming Locations</h2>
-      <p>Select your location to book a grooming service.</p>
-      <div className="location-list">
-        {locations.map((location, index) => (
-          <div key={index} className="location-item">
-            <h3>{location.name}</h3>
-            <p>{location.address}</p>
-            <button className="book-button btn btn-outline-success" onClick={() => handleBooking(location.name)}>
-              Book Now
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
-    </div>
-  )
+    return (
+        <div className="container my-5 ">
+            <h1 className="text-center mb-4">Our Pet Grooming Locations</h1>
+            <div className="row justify-content-center">
+                {locations.map((location, index) => (
+                    <div
+                        key={index}
+                        className="col-md-4 col-sm-6 col-lg-3 mb-4 text-center border p-3 rounded shadow-sm"
+                    >
+                        <img
+                            src={location.image}
+                            alt={location.name}
+                            className="img-fluid rounded mb-3"
+                            style={{ height: "150px", width:'500px', objectFit: "cover" }}
+                        />
+                        <h4 className="fw-bold">{location.name}</h4>
+                        <p>Find professional grooming services in {location.name}.</p>
+                        <Link to="/login">
+                            <button className="btn btn-primary btn-sm">Button</button>
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
 
-export default Location
+export default Locations;

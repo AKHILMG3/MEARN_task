@@ -26,7 +26,7 @@ const services = [
   {
     title: 'Veterinary Services',
     description: 'Complete veterinary care for your furry friends.',
-    imgSrc: 'https://cdn.doggroomingcalgary.ca/wp-content/uploads/2016/01/addons.png?strip=all&lossy=1&quality=92&ssl=1',
+    imgSrc: 'https://thumbs.dreamstime.com/b/mobile-177523513.jpg',
     link: '/login'
   },
   {

@@ -1,3 +1,8 @@
+
+function navigateTologout(){
+    window.location.href = 'index.html'
+}
+
 let balance = 0;
 
 function DepositAmount() {

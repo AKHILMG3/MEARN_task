@@ -10,37 +10,184 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./bank.js"></script>
 </head>
+<style>
+    iframe{
+        width: 350px;
+        height: 200px;
+    }
+</style>
 <body class="bg-blue-200">
 
-    <div>
-        <div class="flex">
-            <div class="flex p-3 m-2">
-                <img src="https://static-00.iconduck.com/assets.00/piggy-bank-illustration-2048x1515-5hfdjwby.png" width="60px" alt=""><br><br>
-                <h1 class="text-2xl font-bold text-blue-600">My Bank</h1>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#"> <h2 class=" fw-bold fs-2 text-blue-700"> <i class="fa-solid fa-building-columns fs-1 "></i></i> Bank </h2> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div>
+                    <button id="reg" class="btn btn-outline-primary m-2 text-blue-700 text-l" onclick="navigateToregister()"> <i class="fa-regular fa-id-badge fa-fade"></i> Register</button>
+                    <button class="btn btn-outline-primary m-2 text-blue-700 text-l " onclick="navigateTologin()"> <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i> login</button>
+                </div>
             </div>
-    
-            <div>
-                <button id="reg" class="m-2 text-blue-700 text-l" onclick="navigateToregister()"> <i class="fa-regular fa-id-badge fa-fade"></i> Register</button>
-                <button class="btn btn-outline-primary m-2 text-blue-700 text-l " onclick="navigateTologin()"> <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i> login</button>
-            </div>
-        </div>        
-
-
-        <div class="flex p-3 m-2">
-            <div>
+        </nav>
+        <hr>
+<br>
+        <div class="">
+            <div class="row flex p-3 m-2">
                 <h1 class="text-4xl font-bold text-blue-600">Online Banking</h1> <br>
 
+                <div class="col-8"><br>
             <p class="p-2 m-2 text-left">Online banking lets you complete everyday banking tasks from a desktop, tablet or mobile device. You can skip the trip to your bank branch or the ATM. Instead, just log in to your account to manage your money, deposit checks and monitor your bank accounts all in one place.
                 Online banking, also known as internet banking, virtual banking, web banking or home banking, is a system that enables customers of a bank or other financial institution to conduct a range of financial transactions through the financial institution's website or mobile app. Since the early 2000s this has become the most common way that customers access their bank accounts.
             </p>
-            </div>
-
-            <img src="https://cdni.iconscout.com/illustration/premium/thumb/bank-customer-support-7989209-6396811.png?f=webp" width="400px" alt="">
-    
         </div>
+            
+
+        <div class="col-3">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/bank-customer-support-7989209-6396811.png?f=webp" width="400px" alt=""></div>
+        </div>
+        <button class="px-5 py-2 m-3 font-bold text-light bg-blue-700 rounded ">Get Start</button>
+    </div>
+    <br>
+        
+    
 
         <div>
-            <button class="px-5 py-2 m-5 font-bold text-light bg-blue-700 rounded ">Get Start</button>
+           
+                <hr>
+<br>
+            <div class="text-center"><h1 class="fw-bold fs-4">Now with over some features and services to meet all your banking needs in one place.</h1>
+<br>
+                <div class="d-flex justify-content-center justify-content-sm-evenly m-2">
+
+                    <div class="fw-bold">
+                        <img class="rounded" src="https://static.vecteezy.com/system/resources/thumbnails/016/389/907/small_2x/money-transfer-and-mobile-banking-free-png.png" width="200" alt="">
+                        Transfer Money
+                    </div>
+                
+                <div class="fw-bold">
+                    <img class="rounded" src="https://cdni.iconscout.com/illustration/premium/thumb/scan-to-pay-7355748-6019592.png" width="160" alt="">
+                    Scan n Pay
+                </div>
+
+                <div class="fw-bold">
+                    <img class="rounded" src="https://png.pngtree.com/png-clipart/20230821/original/pngtree-bill-pay-flat-vector-illustration-picture-image_8149495.png" width="250" alt="">
+                    Bill Pay
+                </div>
+                
+                <div class="fw-bold">
+                    <img class="rounded" src="https://www.pngplay.com/wp-content/uploads/9/Loan-Transparent-Images.png" width="200" alt="">
+                    Loans
+                </div>
+
+                </div>
+<br>
+                <div class="d-flex justify-content-center justify-content-sm-evenly m-2">
+
+                    <div class="fw-bold">
+                        <img class="rounded" src="https://www.pngmart.com/files/23/Investment-PNG-Clipart.png" width="150" alt="">
+                        investment
+                    </div>
+                
+                    <div class="fw-bold">
+                        <img class="rounded" src="https://static.vecteezy.com/system/resources/previews/015/131/905/original/flat-cartoon-style-shop-facade-front-view-modern-flat-storefront-or-supermarket-design-png.png" width="160" alt="">
+                        Travel & Shop
+                    </div>
+                
+                    <div class="fw-bold">
+                        <img class="rounded" src="https://www.pngplay.com/wp-content/uploads/9/Life-Insurance-PNG-Clipart-Background-349x279.png" width="200" alt="">
+                        Insurance
+                    </div>
+                
+                    <div class="fw-bold">
+                        <img class="rounded" src="https://static.vecteezy.com/system/resources/previews/023/258/496/non_2x/digital-data-protection-design-illustration-cyber-security-illustration-background-cloud-computing-network-safety-concept-free-png.png" width="200" alt="">
+                        Enhanced security
+                    </div>
+               
+                </div>
+            </div>
+
+            <br><hr><br>
+
+            <div class="fw-bold text-center">
+               <h1 class="fs-3">Related Videos</h1>
+            <br>
+
+            <div class="d-flex justify-content-center justify-content-sm-evenly">
+
+                <div class="m-2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E-9HBI0X1RI?si=ZvTBYrsH_vsUvKPt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    How to use Pay Your Contact in Mobile Banking App
+                </div>
+                
+                <div class="m-2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/sDRRWi6Mvk4?si=178FJeopP1ZQqIMz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                How to create your UPI ID?
+               </div>
+
+               <div class="m-2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/76PECenC00c?si=3FYnT147OfvO-wfv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                How to access your Loan Account
+              </div>
+
+
+            </div>
+           
+             
+            </div>
+        
+<br><br>
+<hr>
+
+            <footer class="bg-blue-200 text-center">
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                  <!-- Section: Form -->
+                  <section class="">
+                    <form action="">
+                      <!--Grid row-->
+                      <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <p class="pt-2">
+                            <strong>Sign up for our newsletter</strong>
+                          </p>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                          <!-- Email input -->
+                          <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="form5Example26" class="form-control" />
+                            <label class="form-label" for="form5Example26">Email address</label>
+                          </div>
+                        </div>
+                        <!--Grid column-->
+              
+                        <!--Grid column-->
+                        <div class="col-auto">
+                          <!-- Submit button -->
+                          <button data-mdb-ripple-init type="submit" class="btn btn-primary mb-4">
+                            Subscribe
+                          </button>
+                        </div>
+                        <!--Grid column-->
+                      </div>
+                      <!--Grid row-->
+                    </form>
+                  </section>
+                  <!-- Section: Form -->
+                </div>
+                <!-- Grid container -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+                  © 2024 Copyright:
+                  <a class="text-body" href="">MyBank.com</a>
+                </div>
+                <!-- Copyright -->
+              </footer>
 
 
     </div>

@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@300..700&family=Lilita+One&family=Ponnala&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            
+        }
+        .container h2{
+            font-family: "Protest Revolution", sans-serif;
+
+        }
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -16,10 +28,12 @@
         }
         .navbar {
             background-color: #6f4e37;
+         
         }
         .navbar-brand, .nav-link {
             color: #fff !important;
         }
+        
         .hero {
             background: url('https://cdn.pixabay.com/photo/2018/05/12/00/32/coffee-3392168_960_720.jpg') no-repeat center center/cover;
             height: 400px;
@@ -31,6 +45,7 @@
         }
         .hero h1 {
             font-size: 4rem;
+            font-family: "Spicy Rice", serif;
         }
         .coffee-item img {
             width: 100%;
@@ -49,7 +64,7 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#"> <h2 class="fw-bold"> <i class="fa-solid fa-mug-hot"></i> Coffee Bliss </h2> </a>
+            <a class="navbar-brand" href="#"> <h2 class=""> <i class="fa-solid fa-mug-hot"></i> Coffee Bliss </h2> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,8 +86,8 @@
 
     <!-- About Section -->
     <section id="about" class="py-5 text-center">
-        <div class="container">
-            <h2>About Us</h2>
+        <div class="container ">
+            <h2 class="fw-bold">About Us</h2>
             <p class="lead mt-3">
                 At Coffee Bliss, we bring you the finest coffee crafted with passion and precision. Whether you're a fan of a rich espresso or a refreshing cold brew, we have something for every coffee lover.
             </p>
@@ -83,31 +98,43 @@
     <!-- Coffees Section -->
     <section id="menu" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center">Our Coffees</h2>
-            <div class="row g-4 mt-4">
+            <h2 class="text-center fw-bold">Our Coffees</h2>
+            <div class="row g-4 mt-4 ">
                 <div class="col-md-4 coffee-item">
                     <img src="https://cdn.pixabay.com/photo/2016/11/29/04/31/caffeine-1867326_1280.jpg" alt="Cappuccino">
-                    <h5 class="mt-2">Cappuccino</h5>
+                    <h5 class="mt-2 fw-bold">Cappuccino</h5>
                 </div>
-                <div class="col-md-4 coffee-item">
+                <div class="col-md-4 coffee-item fw-bold">
                     <img src="https://cdn.pixabay.com/photo/2019/01/13/11/54/espresso-3930170_1280.jpg" alt="Espresso">
-                    <h5 class="mt-2">Espresso</h5>
+                    <h5 class="mt-2 fw-bold">Espresso</h5>
                 </div>
                 <div class="col-md-4 coffee-item">
                     <img src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg" alt="Cold Brew">
-                    <h5 class="mt-2">Cold Brew</h5>
+                    <h5 class="mt-2 fw-bold">Cold Brew</h5>
                 </div>
                 <div class="col-md-4 coffee-item">
                     <img src="https://cdn.pixabay.com/photo/2016/02/28/23/57/batten-1227812_960_720.jpg" alt="Macchiato">
-                    <h5 class="mt-2">Macchiatos</h5>
+                    <h5 class="mt-2 fw-bold">Macchiatos</h5>
                 </div>
                 <div class="col-md-4 coffee-item">
                     <img src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="Americano">
-                    <h5 class="mt-2">Americano</h5>
+                    <h5 class="mt-2 fw-bold">Americano</h5>
                 </div>
                 <div class="col-md-4 coffee-item">
                     <img src="https://cdn.pixabay.com/photo/2014/12/11/02/56/coffee-563797_1280.jpg" alt="Black Coffee">
-                    <h5 class="mt-2">Black Coffee</h5>
+                    <h5 class="mt-2 fw-bold">Black Coffee</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="Americano">
+                    <h5 class="mt-2 fw-bold">Americano</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="Americano">
+                    <h5 class="mt-2 fw-bold">Americano</h5>
+                </div>
+                <div class="col-md-4 coffee-item">
+                    <img src="https://cdn.pixabay.com/photo/2019/07/18/04/23/coffe-4345449_1280.jpg" alt="Americano">
+                    <h5 class="mt-2 fw-bold">Americano</h5>
                 </div>
             </div>
         </div>
@@ -116,16 +143,59 @@
 
     <!-- Video Section -->
     <section id="video" class="py-5 text-center">
-        <div class="container">
-            <h2>Experience Coffee Bliss</h2>
+        <div class="container"><br><br>
+            <h2 class="fw-bold">Experience Coffee Bliss</h2> <br>
             <video src="https://cdn.pixabay.com/video/2020/08/12/46989-449623829_large.mp4" width="800" autoplay muted loop></video>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Coffee Bliss. All Rights Reserved.</p>
-    </footer>
+    
 
+    <!-- Footer -->
+    <footer class=" footer text-center text-lg-start" >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <form action="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-auto mb-4 mb-md-0">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-5 col-12 mb-4 mb-md-0">
+              <!-- Email input -->
+              <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="form5Example22" class="form-control" />
+                <label class="form-label" for="form5Example22">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-auto mb-4 mb-md-0">
+              <!-- Submit button -->
+              <button data-mdb-ripple-init type="button" class="btn btn-primary mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2020 Copyright:
+        <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 </body>
 </html>

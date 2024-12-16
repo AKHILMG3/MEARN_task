@@ -78,3 +78,10 @@ h2 {
 .actions button:hover {
     background-color: #ddd;
 }
+
+i{
+    color: black;
+}
+.about{
+    font-family: "Varela Round", sans-serif;
+}

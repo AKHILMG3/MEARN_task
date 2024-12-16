@@ -23,7 +23,7 @@ function Header() {
     <div>
         <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='/'>Navbar</MDBNavbarBrand>
+        <MDBNavbarBrand href='/' className='fw-bold'>Paw Spa Co.</MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
           aria-expanded='false'
@@ -35,18 +35,18 @@ function Header() {
         <MDBCollapse navbar open={openNav}>
           <MDBNavbarNav>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current='page' href='location'>
+              <MDBNavbarLink active aria-current='page' href='location'className='fw-bold'>
 			  Pet Grooming
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem >
-              <MDBNavbarLink href='gallery'>Gallery</MDBNavbarLink>
+              <MDBNavbarLink href='gallery' className='fw-bold'>Gallery</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='service'>Services</MDBNavbarLink>
+              <MDBNavbarLink href='service' className='fw-bold'>Services</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='about' >
+              <MDBNavbarLink href='about' className='fw-bold'>
                 	About Us
               </MDBNavbarLink>
             </MDBNavbarItem>

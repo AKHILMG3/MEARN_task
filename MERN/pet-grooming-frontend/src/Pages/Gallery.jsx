@@ -1,14 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-
-function PetGroomingGallery  ()  {
+function Gallery() {
     const [gallery, setGallery] = useState([]);
     const [newEntry, setNewEntry] = useState({ before: '', after: '', petName: '' });
     const [editingIndex, setEditingIndex] = useState(null);
 
+    // Load gallery from local storage on component mount
+    useEffect(() => {
+        const savedGallery = JSON.parse(localStorage.getItem('gallery'));
+        if (savedGallery) {
+            setGallery(savedGallery);
+        }
+    }, []);
+
+    // Save gallery to local storage whenever it changes
+    useEffect(() => {
+        localStorage.setItem('gallery', JSON.stringify(gallery));
+    }, [gallery]);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewEntry({ ...newEntry, [name]: value });
+    };
+
+    const handleFileChange = (e, field) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setNewEntry({ ...newEntry, [field]: reader.result });
+            };
+            reader.readAsDataURL(file);
+        }
     };
 
     const addEntry = () => {
@@ -38,36 +61,75 @@ function PetGroomingGallery  ()  {
     };
 
     return (
-      <div><br /><br /><br />
-        <div className="pet-grooming-gallery border border-3 p-5">
-            <h2>Pet Grooming Gallery</h2><br />
-            <div className="input-section">
-                <input type="text" placeholder="Pet Name" name="petName" value={newEntry.petName} onChange={handleInputChange}/>
-                <input  type="url" placeholder="Before Image URL" name="before" value={newEntry.before} onChange={handleInputChange}/>
-                <input type="url" placeholder="After Image URL" name="after" value={newEntry.after}onChange={handleInputChange} />
-                <button className='btn btn-outline-success' onClick={addEntry}>{editingIndex !== null ? 'Update' : 'Add'}</button>
-            </div>
-            <div className="gallery-section">
-                {gallery.length > 0 ? (
-                    gallery.map((entry, index) => (
-                        <div key={index} className="gallery-item">
-                            <h3>{entry.petName}</h3>
-                            <div className="images">
-                                <img src={entry.before} alt={`${entry.petName} Before`} />
-                                <img src={entry.after} alt={`${entry.petName} After`} />
+        <div>
+            <br />
+            <br />
+            <br />
+            <div className="pet-grooming-gallery border border-3 p-5">
+                <h2>Pet Grooming Gallery</h2>
+                <br />
+                <div className="input-section">
+                    <input
+                        type="text"
+                        placeholder="Pet Name"
+                        name="petName"
+                        value={newEntry.petName}
+                        onChange={handleInputChange}
+                    />
+                    <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleFileChange(e, 'before')}
+                    />
+                    <input
+                        type="file"
+                        accept="image/*"
+                        onChange={(e) => handleFileChange(e, 'after')}
+                    />
+                    <button className="btn btn-outline-success" onClick={addEntry}>
+                        {editingIndex !== null ? 'Update' : 'Add'}
+                    </button>
+                </div>
+                <div className="gallery-section">
+                    {gallery.length > 0 ? (
+                        gallery.map((entry, index) => (
+                            <div key={index} className="gallery-item">
+                                <h3>{entry.petName}</h3>
+                                <div className="images">
+                                    <img
+                                        src={entry.before}
+                                        alt={`${entry.petName} Before`}
+                                        style={{ width: '150px', height: '150px' }}
+                                    />
+                                    <img
+                                        src={entry.after}
+                                        alt={`${entry.petName} After`}
+                                        style={{ width: '150px', height: '150px' }}
+                                    />
+                                </div>
+                                <div className="actions">
+                                    <button
+                                        className="btn btn-outline-success"
+                                        onClick={() => editEntry(index)}
+                                    >
+                                        Edit
+                                    </button>
+                                    <button
+                                        className="btn btn-outline-success"
+                                        onClick={() => deleteEntry(index)}
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
                             </div>
-                            <div className="actions">
-                                <button className='btn btn-outline-success' onClick={() => editEntry(index)}>Edit</button>
-                                <button className='btn btn-outline-success' onClick={() => deleteEntry(index)}>Delete</button>
-                            </div>
-                        </div>
-                    ))
-                ) : (
-                    <p>No entries in the gallery yet!</p>
-                )}
+                        ))
+                    ) : (
+                        <p>No entries in the gallery yet!</p>
+                    )}
+                </div>
             </div>
-        </div></div>
+        </div>
     );
-};
+}
 
-export default PetGroomingGallery;
+export default Gallery;

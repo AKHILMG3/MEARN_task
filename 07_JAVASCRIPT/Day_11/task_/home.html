@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.tailwindcss.com"></script>
 <link rel="icon" type="image/png" href="https://media.istockphoto.com/id/1311618901/vector/line-banking-people-for-account-page-design-isometric-vector-illustration-bank-online-vector.jpg?s=612x612&w=0&k=20&c=6ksqSeTpvUa6ZM7yTigzC7O833Kx0I5sv5EX-9NG2jE=">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="./home.js"></script>
 
 
@@ -19,7 +20,7 @@
     body{
         margin: 0px;
         padding: 0px;
-        background-image: url(https://png.pngtree.com/background/20230622/original/pngtree-illustration-of-3d-personal-bank-account-and-credit-card-with-money-picture-image_3950197.jpg);
+        background-image: url("https://cdn.pixabay.com/photo/2022/04/22/04/42/coins-7148793_1280.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -30,11 +31,7 @@
         position: sticky;
         margin: 0px;
     }
-    nav{
-        display: flex;
-        margin: 0px;
-        padding: 0px;
-    }
+
     ul{
         display: flex;
         align-items: center;
@@ -54,23 +51,27 @@
     .sec{ display: flex;
         justify-content: space-evenly;
         box-shadow: 2px 3px 4px 5px;
-        width: 800px;
+        width: 1000px;
     }
 
 </style>
 <body>
 
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <h2 class=" fw-bold fs-2 text-blue-700"> <i class="fa-solid fa-building-columns fs-1 "></i></i> Bank </h2> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+        
+                <button class="btn btn-outline-primary m-2 text-blue-700 text-l " onclick="navigateTologout()"> <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i> log out</button>
+            </div>
+        </div>
+    </nav>
+ <hr>
     <section>
-        <header>
-            <nav>
-                <ul>
-                <li>Home</li>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>About</li>
-            </ul>
-            </nav>
-        </header>
+      
 
         <section class="head">
             <h1 class="text-5xl font-bold">Welcome user</h1><br>
@@ -81,36 +82,41 @@
         <center>
 
         <section class="sec">
-            <div>
+
+            <div class="row">
+
+            <div class="col-6">
 
             <h1 class="text-white p-2 m-2">Deposit</h1> 
-            <input id="depositamount" type="text" class="rounded p-2 w-100" placeholder="Amount"><br><br>
-            <input id="depositpassword" type="password" class="rounded p-2 w-100" placeholder="Password"><br><br>
+            <input id="depositamount" type="text" class="rounded p-2 w-75" placeholder="Amount"><br><br>
+            <input id="depositpassword" type="password" class="rounded p-2 w-75" placeholder="Password"><br><br>
 
-            <button class="text-white bg-blue-600 p-2 m-2 w-75 rounded" onclick="DepositAmount()" >Deposit</button><br><br>
+            <button class="btn btn-outline-primary m-2 text-blue-700 text-l w-25" onclick="DepositAmount()" >Deposit</button><br><br>
 
         
         <br><br>
         </div>
 
-        <div> 
+        <div class="col-6"> 
                 <h1 class="text-white p-2 m-2">Withdraw</h1>
-                <input id="Withdrawpassword" type="text" class="rounded p-2 w-100" placeholder="Amount"><br><br>
-                <input id="withdrawpassword" type="password" class="rounded p-2 w-100" placeholder="password"><br><br>
+                <input id="Withdrawpassword" type="text" class="rounded p-2 w-75" placeholder="Amount"><br><br>
+                <input id="withdrawpassword" type="password" class="rounded p-2 w-75" placeholder="password"><br><br>
 
-                <button class="text-white bg-blue-600 p-2 m-2 w-75 rounded" onclick="WithdrawAmount()" >Withdraw</button><br><br>
-
+                <button class="btn btn-outline-primary m-2 text-blue-700 text-l" onclick="WithdrawAmount()" >Withdraw</button><br><br>
+                
              <br><br>
-             <h3 id="BALANCE" class="text-white p-3 m-3">Your Current Balance : 0rs</h3>
-
+            
+            
         </div>
+        <h3 id="BALANCE" class="text-white text-center p-3 m-3 fw-bold fs-3">Your Current Balance : 0rs</h3>
+    </div>
 
         </section>
-
+       
     </section>
 </center>
 
-
+<br><br>
     
 </body>
 </html>

@@ -1,5 +1,5 @@
 import { serverURL } from "./serverURL";
-import { commonAPI } from "./commonAPI.JS";
+import { commonAPI } from "./commonAPI.js";
 
 export const registerAPI = async(user)=>{
     return await commonAPI('post' , `${serverURL}/api/register`,user,"")
