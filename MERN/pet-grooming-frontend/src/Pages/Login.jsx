@@ -148,8 +148,7 @@ function Login() {
 					<label htmlFor="password" className="text-sm fw-bold">Password</label>
 					<a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-600">Forgot password?</a>
 				</div>
-				<input  type="email"
-         
+				<input  type="password"         
 		 name="password"
 		 value={userData.password}
 		 onChange={handleInputChange}

@@ -37,3 +37,9 @@ function WithdrawAmount() {
         }
     
 }   
+
+document.addEventListener("DOMContentLoaded", function () {
+    let userName = localStorage.getItem("userName");
+    document.getElementById("welcomeuser").innerHTML = `Welcome ${userName ? userName : ''}`;
+});
+

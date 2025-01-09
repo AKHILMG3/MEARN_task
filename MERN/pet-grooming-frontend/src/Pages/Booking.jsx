@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import { ToastContainer, toast,Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,6 +20,8 @@ function Booking() {
         address:"",
         services: [],
     });
+
+    const navigate = useNavigate();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -54,6 +57,10 @@ function Booking() {
 			theme: "light",
 			transition: Bounce,
 		  });
+          setTimeout(()=>{
+            navigate('/')
+          },6000)
+         
                 setFormData({
                     name: "",
                     petType: "",
@@ -66,6 +73,7 @@ function Booking() {
                     services: [],
                 });
             }
+           
         } catch (error) {
             if (error.response) {
                 console.error("Error details:", error.response.data);
